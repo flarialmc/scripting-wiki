@@ -1,0 +1,19 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.sidebar {
+  background-color: #1e1e1e;
+  color: #ff4b4b;
+}
+
+.sidebar-item:hover {
+  color: #ff6f6f;
+}
+
+.popup-menu {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #ff4b4b;
+}
