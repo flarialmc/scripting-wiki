@@ -1,3 +1,27 @@
-Collapsible {
-    background-color: #4f2f2f;
+.sidebar {
+    width: 30%;
+}
+
+.Collapsible__trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #2f2f2f;
+    background-color: #282828;
+    padding: 12px;
+    border-radius: 12px 12px 0px 0px;
+    padding-bottom: 20px;
+}
+.Collapsible__trigger svg {
+    transition: all .5s ease;
+}
+.Collapsible__trigger.is-open svg {
+    transform: rotate(180deg);
+}
+
+.Collapsible__contentOuter {
+    border: 2px solid #2f2f2f;
+    border-radius: 0px 0px 12px 12px;
+    transition: all .2s ease;
+    padding-bottom: 12px;
 }
