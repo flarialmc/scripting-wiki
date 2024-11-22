@@ -1,0 +1,60 @@
+body {
+    background-color: #1f1f1f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.header {
+    background-color: #241700f6;
+    min-height: 64px;
+    border: 1px solid red; /* debug */
+    border-radius: 36px;
+    padding-left: 6px;
+    /* padding: 12px; */
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+#left-group {
+    /* border: 1px solid red; debug */
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+    
+}
+
+.header>div>a>img {
+    height: 48px;
+}
+
+#right-group {
+    /* border: 1px solid #2f2f2f; */
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 2px;
+}
+#links, #discord {
+    display:flex;
+    align-items: center;
+}
+
+#links>a {
+    color: white;
+    transition: all .2s ease;
+    padding: 20px;
+    border: 0px solid black;
+    border-radius: 32px;
+    font-size: 1.2rem
+}
+
+#links>a:hover {
+    background-color: #ff0000;
+}
+
+#links>img{
+    height: 48px;
+    padding-right: 6px;
+    filter: invert(100%) hue-rotate(180deg); /* stupid hack but works lmao*/
+}

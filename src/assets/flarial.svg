@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="305" height="268.36">
+    <g id="back" transform="translate(5,8.66)">
+        <polygon points="100,0 150,86.6 250,86.6 300,0" fill="#822a2b"/>
+        <polygon points="0,173.2 50,259.7 100,173.2 200,173.2 150,86.6 50,86.6" fill="#652626"/>
+    </g>
+    <g id="front">
+        <polygon points="100,0 150,86.6 250,86.6 300,0" fill="#ff4444"/>
+        <polygon points="0,173.2 50,259.7 100,173.2 200,173.2 150,86.6 50,86.6" fill="#c33b3a"/>
+    </g>
+</svg>
