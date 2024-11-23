@@ -153,7 +153,7 @@ const Documentation = () => {
         {
           "name": "Notify chat message",
           "description": "gives example of packet reading",
-          "exampleCode": "onEvent(EventType.onPacketReceiveEvent, function(packet, id)\n    if id == 9 then\n        Notify(TextPacket.getMessage(packet))\n    end\nend)"
+          "exampleCode": "function onEnable()\n    Notify(\"enabled\")\nend\n\nfunction onDisable()\n    Notify(\"disabled\")\nend\n\nonEvent(EventType.onPacketReceiveEvent, function(packet, id)\n    if id == 9 then\n        Notify(TextPacket.getMessage(packet))\n    end\nend)"
         }
       ]
     },
