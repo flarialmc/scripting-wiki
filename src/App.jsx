@@ -9,16 +9,13 @@ function App() {
   return (
     <>
     <div className='header'>
-
       <div id='left-group'> {/** left group */}
         <a href='https://flarial.xyz'>
           <img src='./src/assets/flarial.svg' alt='Flarial'/>
         </a>
         <h2>Flarial Scripting Documentation</h2>
       </div>
-
       <HeaderRightLinksDesktop></HeaderRightLinksDesktop>
-
     </div>
     <Sidebar></Sidebar>
 
