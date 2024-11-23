@@ -3,6 +3,10 @@ import './styles/App.css'
 import HeaderRightLinksDesktop from './components/HeaderRightLinksDesktop'
 import Sidebar from './components/Sidebar'
 
+function test(id) {
+  console.log(`click from ${id}`)
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -17,7 +21,7 @@ function App() {
       </div>
       <HeaderRightLinksDesktop></HeaderRightLinksDesktop>
     </div>
-    <Sidebar></Sidebar>
+    <Sidebar functionsDisplayFunc={test}/>
 
     </>
   )

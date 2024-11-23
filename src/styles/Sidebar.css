@@ -3,6 +3,7 @@
 }
 
 .Collapsible__trigger {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,9 +20,25 @@
     transform: rotate(180deg);
 }
 
-.Collapsible__contentOuter {
+.Collapsible__contentOuter  {
     border: 2px solid #2f2f2f;
     border-radius: 0px 0px 12px 12px;
     transition: all .2s ease;
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
+}
+
+div#maincaterogy.Collapsible__contentOuter {
+    padding-left: 20px;
+    border-radius: 0px 0px 120px 12px;
+
+}
+
+.func {
+    cursor: pointer;
+    padding: 12px;
+    transition: all .1s ease;
+}
+
+.func:hover {
+    background-color: #303030;
 }
