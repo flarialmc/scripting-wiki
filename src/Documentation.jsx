@@ -124,6 +124,11 @@ const Documentation = () => {
           "name": "getZ",
           "description": "returns player Z",
           "exampleCode": "player.getZ()"
+        },
+        {
+          "name": "isOnGround",
+          "description": "isOnGround is a boolean",
+          "exampleCode": "Player.isOnGround()"
         }
       ]
     },
@@ -144,6 +149,11 @@ const Documentation = () => {
           "name": "Settings usage",
           "description": "example settings usage",
           "exampleCode": "function onEnable()\n    Notify(\"enabled\")\nend\n\nfunction onDisable()\n    Notify(\"disabled\")\nend\n\nfunction defaultConfig()\n    Settings.CreateSetting(\"test\", \"aaa\")\n    Settings.CreateSetting(\"testbool\", true)\n    Settings.CreateSetting(\"testfloat\", 1.0)\nend\n\nfunction settingsRender()\n    Settings.AddHeader('Settings.AddTextBox(\"test\", \"test textbox\", \"lol\")')\n    Settings.AddTextBox(\"test\", \"test textbox\", \"lol\")\n    Settings.AddHeader('Settings.AddToggle(\"testbool\", \"test texttoggle\", \"\")')\n    Settings.AddToggle(\"testbool\", \"test texttoggle\", \"\")\n    Settings.AddHeader('Settings.AddSlider(\"testfloat\", \"test slider\", \"\", 0, 2.0)')\n    Settings.AddSlider(\"testfloat\", \"test slider\", \"\", 0, 2.0)\n    Settings.AddHeader(\"Settings.AddHeader('test')\")\n    Settings.AddHeader('test')\nend\n\nonEvent(EventType.onRenderEvent, function()\n\n    GUI.TextWithFont(50, 100, Settings.GetSetting(\"test\", \"string\"), 200, 50, Constraints.RelativeConstraint(0.25, \"height\"))\n\nend)\n"
+        },
+        {
+          "name": "Notify chat message",
+          "description": "gives example of packet reading",
+          "exampleCode": "onEvent(EventType.onPacketReceiveEvent, function(packet, id)\n    if id == 9 then\n        Notify(TextPacket.getMessage(packet))\n    end\nend)"
         }
       ]
     },
@@ -199,6 +209,21 @@ const Documentation = () => {
           },
           "description": "Adds slider",
           "exampleCode": "Settings.AddSlider(setting name, slider name, slider description, minValue, maxVlue)"
+        }
+      ]
+    },
+    {
+      "name": "TextPacket",
+      "functions": [
+        {
+          "name": "getMessage",
+          "description": "getMessage returns received message",
+          "exampleCode": "TextPacket.getMessage(Packet)"
+        },
+        {
+          "name": "getType",
+          "description": "getType returns text packet types",
+          "exampleCode": "TextPacket.getType(Packet)"
         }
       ]
     }
