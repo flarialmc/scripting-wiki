@@ -2,11 +2,18 @@ import { useState } from 'react'
 import './styles/App.css'
 import HeaderRightLinksDesktop from './components/HeaderRightLinksDesktop'
 import Sidebar from './components/Sidebar'
+import Home from './components/HomePage'
+import docs from "../src/assets/documentation.json"
 
-function test(id) {
-  console.log(`click from ${id}`)
+let currentCategory="home"
+
+function functionDisplayFunc(id) {
+  console.log(`click from function ${id}`)
 }
 
+function categoryDisplayFunc(cat) {
+  console.log(`click from category ${cat}`)
+}
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,8 +28,13 @@ function App() {
       </div>
       <HeaderRightLinksDesktop></HeaderRightLinksDesktop>
     </div>
-    <Sidebar functionsDisplayFunc={test}/>
+    {/* header ^^^^^^^^^ */}
+    <div className='mainbody'>
+        <Sidebar functionsDisplayFunc={functionDisplayFunc} categoryDisplayFunc={categoryDisplayFunc} abc={"asd"}/>
+        {/* sidebar ^^^^^^^^ */}
+        <Home></Home>
 
+    </div>
     </>
   )
 }

@@ -58,3 +58,21 @@ body {
     padding-right: 6px;
     filter: invert(100%) hue-rotate(180deg); /* stupid hack but works lmao*/
 }
+
+.home {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+.mainbody {
+    display: flex;
+}
+.warn{
+    color: red;
+    font-weight: bold;
+}
+.note {
+    color: yellow;
+    font-style: italic;
+    display: inline;
+}
