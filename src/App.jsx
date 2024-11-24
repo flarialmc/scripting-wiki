@@ -3,20 +3,39 @@ import './styles/App.css'
 import HeaderRightLinksDesktop from './components/HeaderRightLinksDesktop'
 import Sidebar from './components/Sidebar'
 import Home from './components/HomePage'
+import ReactDOM from "react-dom/client"
 import docs from "../src/assets/documentation.json"
+import CategoryPage from './components/CategoryPage'
 
 let currentCategory="home"
+let testVar = "na;;s"
+let currentCategoryElement
+let categoryDisplay
+let categoryDisplayRoot 
 
+
+function setupCategoryDisplayRoot() {
+  categoryDisplay = document.getElementById("categoryDisplay")
+  categoryDisplayRoot = ReactDOM.createRoot(categoryDisplay)
+  console.log("setup done")
+}
 function functionDisplayFunc(id) {
   console.log(`click from function ${id}`)
+  testVar = id
 }
 
 function categoryDisplayFunc(cat) {
-  console.log(`click from category ${cat}`)
+  currentCategory = cat
+  if (cat == "home") {
+    return categoryDisplayRoot.render(<Home/>)
+  }
+  console.log("no we are not at home")
+  currentCategoryElement = <CategoryPage cat={cat}/> 
+  categoryDisplayRoot.render(currentCategoryElement)
 }
-function App() {
-  const [count, setCount] = useState(0)
 
+function App() {
+  
   return (
     <>
     <div className='header'>
@@ -32,7 +51,10 @@ function App() {
     <div className='mainbody'>
         <Sidebar functionsDisplayFunc={functionDisplayFunc} categoryDisplayFunc={categoryDisplayFunc} abc={"asd"}/>
         {/* sidebar ^^^^^^^^ */}
-        <Home></Home>
+        <div className="mainbody" id="categoryDisplay">
+          <p hidden>{setTimeout(()=>setupCategoryDisplayRoot(),500)}</p> {/**idfk this works, i assume mfs wont click fast enough */}
+          <Home/>
+        </div>
 
     </div>
     </>

@@ -22,7 +22,7 @@ end`;
 function HomePage () {
   const code1 = `%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial\scripts`
     return (
-        <>
+        <div>
             <div className="home">
               <Prism language="lua" style={dracula}>{minScriptContent}</Prism>
               <Prism language="lua" style={dracula}>{minScriptContent}</Prism>
@@ -33,12 +33,12 @@ function HomePage () {
               <p>Scripts can be found in the script browser (TBD), however you can add one yourself by pasting the script folder in this path</p>
               <i>this location can change if you have a version switcher</i>
               <Prism language="lua" style={dracula}>{code1}</Prism>
-              <p class="warn"><strong>WARNING: </strong>Scripts from external sources can have unwanted features</p>
+              <p className="warn"><strong>WARNING: </strong>Scripts from external sources can have unwanted features</p>
             </div>
 
             <div className="function-section">
               <h1>Setting up</h1>
-              <a class="underline" href = "https://code.visualstudio.com/">VSCode download</a>
+              <a className="underline" href = "https://code.visualstudio.com/">VSCode download</a>
               <p>Tab completer:</p>
               <Prism language="lua" style={dracula}>not done</Prism>
             </div>
@@ -59,7 +59,7 @@ function HomePage () {
               <p>Look at script examples for more</p>
             </div>
             </div>   
-        </>
+        </div>
     )
 }
 export default HomePage
