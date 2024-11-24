@@ -29,8 +29,8 @@ function HomePage () {
               <Prism language="lua" style={dracula}>{minScriptContent}</Prism>
             <div className="function-section">
               <h1>About</h1>
-              <p>Flarial scripting api uses l ua 5.4.7. Scripting api allows you to create you own custom modules.</p>
-              <p>Scripts can be found in the sc ript browser (TBD), however you can add one yourself by pasting the script folder in this path</p>
+              <p>Flarial scripting api uses lua 5.4.7. Scripting api allows you to create you own custom modules.</p>
+              <p>Scripts can be found in the script browser (TBD), however you can add one yourself by pasting the script folder in this path</p>
               <i>this location can change if you have a version switcher</i>
               <Prism language="lua" style={dracula}>{code1}</Prism>
               <p class="warn"><strong>WARNING: </strong>Scripts from external sources can have unwanted features</p>

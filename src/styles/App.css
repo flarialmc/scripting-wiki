@@ -5,10 +5,11 @@ body {
 }
 
 .header {
-    background-color: #241700f6;
+    background-color: #2B2B2B;
     min-height: 64px;
-    border: 1px solid red; /* debug */
-    border-radius: 36px;
+    border: 1px solid #2f2f2f ; /* debug */
+    color: #FFFFFF;
+    border-radius: 12px;
     padding-left: 6px;
     /* padding: 12px; */
     display:flex;
@@ -25,7 +26,9 @@ body {
 }
 
 .header>div>a>img {
-    height: 48px;
+    height: 24px;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
 #right-group {
@@ -46,11 +49,13 @@ body {
     padding: 20px;
     border: 0px solid black;
     border-radius: 32px;
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 #links>a:hover {
-    background-color: #ff0000;
+    background-color: #2f2f2f;
+    opacity: 0.3;
 }
 
 #links>img{
