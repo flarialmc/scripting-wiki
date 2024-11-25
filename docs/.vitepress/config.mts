@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
     title: "Flarial Scripting Wiki",
     description: "Wiki teaching how to use Lua Scripting for Flarial Client",
-    base: "/",
+    base: "/flarial-scripting-wiki/",
     themeConfig: {
         logo: "/assets/image.png",
         search: {
