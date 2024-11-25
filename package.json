@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "description": "Scripting wiki for Flarial Client",
     "scripts": {
-        "docs:dev": "vitepress dev docs",
-        "docs:build": "vitepress build docs",
-        "docs:preview": "vitepress preview docs"
+        "dev": "vitepress dev docs",
+        "build": "vitepress build docs",
+        "preview": "vitepress preview docs"
     },
     "dependencies": {
         "vitepress": "^1.5.0"
