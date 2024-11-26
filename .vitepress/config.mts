@@ -32,6 +32,10 @@ export default defineConfig({
                     {
                         text: "Prerequisites",
                         link: "/getting-started/prerequisites.md"
+                    },
+                    {
+                        text: "VSCode Extension",
+                        link: "/getting-started/vscode-extension.md"
                     }
                 ]
             },
