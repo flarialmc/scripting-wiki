@@ -28,6 +28,7 @@ This guide is using [Git](https://git-scm.com/) and [Node.js](https://nodejs.org
   ```
 
 🎉 Congrats, you've done it. Now when you open a Lua file to make scripting for Flarial Client, you'll be able to make valid scripting much easier.
+
 :::tip
 This is why, we recommended Visual Studio Code, but you do not need this IDE or this extension to code a script for Flarial Client; these just make it easier.
 :::
