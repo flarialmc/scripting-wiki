@@ -82,6 +82,10 @@ export default defineConfig({
                     {
                         text: "Settings Usage",
                         link: "/examples/settings-usage.md"
+                    },
+                    {
+                        text: "Example custom screen",
+                        link: "/examples/custom-screen.md"
                     }
                 ]
             }
