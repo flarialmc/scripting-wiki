@@ -27,5 +27,11 @@ Writes text on screen.
 GUI.TextWithFont(int: x, int: y, string: text, float: height, float: width, float: fontSize) 
 ```
 :::tip
-Recommended to use constraints for font size. See more about constraints [here](global.md).
+Recommended to use constraints for font size. See more about constraints [here](constraints.md).
 :::
+
+# GUI.RoundedButton
+Draws a clickable Rounded Button on the screen.
+```lua
+GUI.RoundedButton(int: index, float: x, float: y, GUI.Color: color, GUI.Color: textColor, string: text, float: width, float: height, float: radiusX, float: radiusY, bool: glow) → boolean  
+```
