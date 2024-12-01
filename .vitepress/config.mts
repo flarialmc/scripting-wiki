@@ -65,6 +65,10 @@ export default defineConfig({
                     {
                         text: "Settings",
                         link: "/api/settings.md"
+                    },
+                    {
+                        text: "Client",
+                        link: "/api/client.md"
                     }
                 ]
             },
