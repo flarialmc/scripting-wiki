@@ -18,7 +18,8 @@ In your main.json you want to have:
 {
     "name": "Flarial Scripting Test Module",
     "description": "Flarial Scripting Test Module Description",
-    "main_class": "main.lua" // the base of your script
+    "main_class": "main.lua", // the base of your script
+    "api_revision": 1 //api version 
 }
 ```
 
