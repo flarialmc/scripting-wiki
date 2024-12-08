@@ -90,6 +90,10 @@ export default defineConfig({
                     {
                         text: "Example custom screen",
                         link: "/examples/custom-screen.md"
+                    },
+                    {
+                        text: "Example custom command",
+                        link: "/examples/custom-command.md"
                     }
                 ]
             }

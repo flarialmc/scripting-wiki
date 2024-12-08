@@ -35,3 +35,9 @@ Draws a clickable Rounded Button on the screen.
 ```lua
 GUI.RoundedButton(int: index, float: x, float: y, GUI.Color: color, GUI.Color: textColor, string: text, float: width, float: height, float: radiusX, float: radiusY, bool: glow) → boolean  
 ```
+
+# GUI.NormalRender
+Draws moveable element 
+```lua
+GUI.NormalRender(int: index, string: text)
+```

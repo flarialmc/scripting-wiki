@@ -37,3 +37,11 @@ end)
 | onPacketReceiveEvent     | Packet: packet, int: packet id     |
 | onTickEvent              |                                    |
 | onRenderEvent            |                                    |
+
+# onCommand
+Command listener
+```lua
+onCommand(string: name, string: description, function(args)
+    -- code for command
+end)
+```
