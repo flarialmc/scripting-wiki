@@ -16,3 +16,22 @@ onEvent(EventType.onPacketReceiveEvent, function(packet, id)
     end
 end)
 ```
+
+Canceling packet
+
+```lua
+function onEnable()
+    Notify("enabled")
+end
+
+function onDisable()
+    Notify("disabled")
+end
+
+onEvent(EventType.onPacketReceiveEvent, function(packet, id)
+    if id == 9 then
+        Notify(TextPacket.getMessage(packet))
+        return true
+    end
+end)
+```

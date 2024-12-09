@@ -23,12 +23,6 @@ sendClientMessage(string)
 ```
 
 # onEvent
-Event Listener
-```lua
-onEvent(EventType: eventname, function()
-    -- on event do this
-end)
-```
 ### Event Types
 | Name                     | Argument                           |
 |--------------------------|------------------------------------|
@@ -37,6 +31,13 @@ end)
 | onPacketReceiveEvent     | Packet: packet, int: packet id     |
 | onTickEvent              |                                    |
 | onRenderEvent            |                                    |
+
+### Event Listener
+```lua
+onEvent(EventType: eventname, function()
+    -- on event do this
+end)
+```
 
 ### Canceling event 
 ```lua
