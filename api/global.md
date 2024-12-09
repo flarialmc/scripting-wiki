@@ -38,6 +38,13 @@ end)
 | onTickEvent              |                                    |
 | onRenderEvent            |                                    |
 
+### Canceling event 
+```lua
+onEvent(EventType: eventname, function()
+    return true -- return true will cancel event
+end)
+```
+
 # onCommand
 Command listener
 ```lua
