@@ -56,7 +56,14 @@ export default defineConfig({
                     },
                     {
                         text: "Packets",
-                        link: "/api/packets.md"
+                        items: [
+                            {
+                                text: "Text Packet",
+                                link:"/api/packets/TextPacket"
+                            }
+
+                        ]
+
                     },
                     {
                         text: "Player",
