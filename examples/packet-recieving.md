@@ -11,7 +11,7 @@ function onDisable()
 end
 
 onEvent(EventType.onPacketReceiveEvent, function(packet, id)
-    if id == 9 then
+    if id == MinecraftPacketIds.Text then
         Notify(TextPacket.getPacket(packet).message)
     end
 end)
@@ -29,7 +29,7 @@ function onDisable()
 end
 
 onEvent(EventType.onPacketReceiveEvent, function(packet, id)
-    if id == 9 then
+    if id == MinecraftPacketIds.Text then
         Notify(TextPacket.getPacket(packet).message)
         return true
     end
