@@ -12,7 +12,7 @@ end
 
 onEvent(EventType.onPacketReceiveEvent, function(packet, id)
     if id == 9 then
-        Notify(TextPacket.getMessage(packet))
+        Notify(TextPacket.getPacket(packet).message)
     end
 end)
 ```
@@ -30,7 +30,7 @@ end
 
 onEvent(EventType.onPacketReceiveEvent, function(packet, id)
     if id == 9 then
-        Notify(TextPacket.getMessage(packet))
+        Notify(TextPacket.getPacket(packet).message)
         return true
     end
 end)
