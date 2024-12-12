@@ -60,6 +60,10 @@ export default defineConfig({
                             {
                                 text: "Text Packet",
                                 link:"/api/packets/TextPacket"
+                            },
+                            {
+                                text: "Packets",
+                                link:"/api/packets/Packets"
                             }
 
                         ]
