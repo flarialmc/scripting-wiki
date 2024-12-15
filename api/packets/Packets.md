@@ -89,7 +89,7 @@ MinecraftPacketIds:
 | ResourcePackChunkData             |
 | ResourcePackChunkRequest          |
 | Transfer                          |
-| PlaySound                         |
+| PlaySoundPacket                   |
 | StopSound                         |
 | SetTitle                          |
 | AddBehaviorTree                   |

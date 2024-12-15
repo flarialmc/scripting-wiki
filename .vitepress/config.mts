@@ -62,6 +62,14 @@ export default defineConfig({
                                 link:"/api/packets/TextPacket"
                             },
                             {
+                                text: "Set Title",
+                                link:"/api/packets/SetTitle"
+                            },
+                            {
+                                text: "Play Sound",
+                                link:"/api/packets/PlaySound"
+                            },
+                            {
                                 text: "Packets",
                                 link:"/api/packets/Packets"
                             }
