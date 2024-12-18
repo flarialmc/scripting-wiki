@@ -43,7 +43,7 @@ GUI.NormalRender(int: index, string: text)
 ```
 
 # GUI.getCurrentScreen
-REturns current mc screen
+Returns current mc screen
 ```lua
 GUI.getCurrentScreen()
 ```
