@@ -41,3 +41,9 @@ Draws moveable element
 ```lua
 GUI.NormalRender(int: index, string: text)
 ```
+
+# GUI.getCurrentScreen
+REturns current mc screen
+```lua
+GUI.getCurrentScreen()
+```
