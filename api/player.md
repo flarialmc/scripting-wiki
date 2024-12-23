@@ -1,13 +1,23 @@
+# Player (Object)
+A datatype that represents a player in memory. 
+There are two ways of getting one:
+getLocalPlayer()
+and returnPlayerList()
+they are elaborated in this page
+:::tip
+Generally, every function that concerns manipulating/getting data about a player requires a Player object
+:::
+
 # player.getPosArray
 Gets the position of the player as a array
 ```lua
-    player.getPosArray() -> [x,y,z]
+player.getPosArray(Player) -> [x,y,z]
 ```
 # player.getPlayerName
 
 Returns the name of the player.
 ```lua
-player.getPlayerName()
+player.getPlayerName(Player) -> string
 ```
 
 # player.getX
@@ -16,16 +26,16 @@ Deprecated, use getPosArray instead
 :::
 Returns player's X-coordinate.
 ```lua
-player.getX()
+player.getX(Player) -> float
 ```
 
-# player.getY
+# player.getY()
 Returns player's Y-coordinate.
 :::warning
 Deprecated, use getPosArray instead
 :::
 ```lua
-player.getY()
+player.getY(Player) -> float
 ```
 
 # player.getZ
@@ -34,11 +44,20 @@ Deprecated, use getPosArray instead
 :::
 Returns player's Z-coordinate.
 ```lua
-player.getZ()
+player.getZ(Player) -> float
 ```
-
+# player.getLocalPlayer
+returns the local player (generally you)
+````lua
+player.getLocalPlayer() -> Player
+````
+# player.returnPlayerList
+returns list of players
+```lua
+player.getPlayerList -> [Player]
+```
 # player.isOnGround
 True/False, player is on ground.
 ```lua
-Player.isOnGround()
+Player.isOnGround(Player) -> bool
 ```
