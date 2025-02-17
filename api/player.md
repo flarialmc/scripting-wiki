@@ -61,3 +61,18 @@ True/False, player is on ground.
 ```lua
 Player.isOnGround(Player) -> bool
 ```
+# player.getYaw
+Returns player yaw
+```lua
+Player.getYaw() -> float
+```
+# player.getPitch
+Returns player pitch
+```lua
+Player.getPitch() -> float
+```
+# player.getInventory
+Returns player inventory object
+```lua
+Player.getInventory() -> pointer
+```

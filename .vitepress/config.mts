@@ -88,6 +88,10 @@ export default defineConfig({
                     {
                         text: "Client",
                         link: "/api/client.md"
+                    },
+                    {
+                        text: "Inventory",
+                        link: "/api/inventory.md"
                     }
                 ]
             },
@@ -113,6 +117,15 @@ export default defineConfig({
                     {
                         text: "Example custom command",
                         link: "/examples/custom-command.md"
+                    }
+                ]
+            },
+            {
+                text: "Libs",
+                items: [
+                    {
+                        text: "ImGui",
+                        link: "/lib/ImGui.md"
                     }
                 ]
             }
