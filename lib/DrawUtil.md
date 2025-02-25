@@ -1,6 +1,6 @@
 # DrawUtil (Object)
 ::: info
-lib path is "DrawUtil"
+lib path is "Flarial/Utils/DrawUtil"
 :::
 
 # DrawUtil.drawBox
