@@ -62,12 +62,16 @@ export default defineConfig({
                                 link:"/api/packets/TextPacket"
                             },
                             {
-                                text: "Set Title",
+                                text: "Set Title Packet",
                                 link:"/api/packets/SetTitle"
                             },
                             {
-                                text: "Play Sound",
+                                text: "Play Sound Packet",
                                 link:"/api/packets/PlaySound"
+                            },
+                            {
+                                text: "Change Dimension Packet",
+                                link:"/api/packets/ChangeDimension"
                             },
                             {
                                 text: "Packets",
@@ -126,6 +130,14 @@ export default defineConfig({
                     {
                         text: "ImGui",
                         link: "/lib/ImGui.md"
+                    },
+                    {
+                        text: "Audio",
+                        link: "/lib/Audio.md"
+                    },
+                    {
+                        text: "DrawUtil",
+                        link: "/lib/DrawUtil.md"
                     }
                 ]
             }
