@@ -10,4 +10,4 @@ The location of this folder might change if using a version switcher, or custom 
 :::
 
 You can find most of our approved scripts listed down below:
-- [Future Script](/)
+- [Marketplace](https://marketplace.flarial.xyz)
