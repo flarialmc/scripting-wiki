@@ -1,44 +1,44 @@
 import {
   useMediaQuery
-} from "./chunk-YJ6QP2VR.js";
+} from "./chunk-A7UTJUSY.js";
 import {
   computed,
   ref,
   shallowRef,
   watch
-} from "./chunk-LW4I4DCF.js";
+} from "./chunk-VJWGEPT5.js";
 
 // node_modules/vitepress/dist/client/theme-default/index.js
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 
 // node_modules/vitepress/dist/client/theme-default/without-fonts.js
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/base.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
-import "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
-import VPBadge from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import Layout from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/Layout.vue";
-import { default as default2 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
-import { default as default3 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
-import { default as default4 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
-import { default as default5 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
-import { default as default6 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
-import { default as default7 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
-import { default as default8 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
-import { default as default9 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
-import { default as default10 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
-import { default as default11 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
-import { default as default12 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
-import { default as default13 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
-import { default as default14 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
-import { default as default15 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
-import { default as default16 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
-import { default as default17 } from "/workspaces/flarial-scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/base.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/icons.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/custom-block.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-doc.css";
+import "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
+import VPBadge from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import Layout from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/Layout.vue";
+import { default as default2 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
+import { default as default3 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPImage.vue";
+import { default as default4 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPButton.vue";
+import { default as default5 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeContent.vue";
+import { default as default6 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
+import { default as default7 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
+import { default as default8 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
+import { default as default9 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPLink.vue";
+import { default as default10 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPDocAsideSponsors.vue";
+import { default as default11 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPSocialLink.vue";
+import { default as default12 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPSocialLinks.vue";
+import { default as default13 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPSponsors.vue";
+import { default as default14 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamPage.vue";
+import { default as default15 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageTitle.vue";
+import { default as default16 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamPageSection.vue";
+import { default as default17 } from "/home/ishaan/WebstormProjects/scripting-wiki/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
 
 // node_modules/vitepress/dist/client/theme-default/support/utils.js
 import { withBase } from "vitepress";

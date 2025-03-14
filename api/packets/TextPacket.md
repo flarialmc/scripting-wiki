@@ -1,7 +1,7 @@
 # TextPacket.getType
 getType returns text packet types.
 ```lua
-TextPacket.getType(Packet)
+TextPacket.getType(Packet) 
 ```
 # TextPacket.getPacket
 returns the packet information as a table
@@ -12,5 +12,5 @@ TextPacket.getPacket(Packet) -> {"type","name","message","xuid","platformId"}
 If sender is not specified, uses local player
 sends a chat packet with the given message
 ```lua
-TextPacket.sendPacket("Hi!")
+TextPacket.sendPacket("Hi!") 
 ```
