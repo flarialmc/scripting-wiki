@@ -44,15 +44,15 @@ export default defineConfig({
                 items: [
                     {
                         text: "Constraints",
-                        link: "/api/client.md"
+                        link: "/api/constraints.md"
                     },
                     {
                         text: "Global",
                         link: "/api/global.md"
                     },
                     {
-                        text: "FileSystem",
-                        link: "/api/fs.md"
+                        text: "GUI",
+                        link: "/api/gui.md"
                     },
                     {
                         text: "Packets",
@@ -90,8 +90,8 @@ export default defineConfig({
                         link: "/api/settings.md"
                     },
                     {
-                        text: "Audio",
-                        link: "/api/audio.md"
+                        text: "Client",
+                        link: "/api/client.md"
                     },
                     {
                         text: "Inventory",
