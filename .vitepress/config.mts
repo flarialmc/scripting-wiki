@@ -55,33 +55,6 @@ export default defineConfig({
                         link: "/api/gui.md"
                     },
                     {
-                        text: "Packets",
-                        items: [
-                            {
-                                text: "Text Packet",
-                                link:"/api/packets/TextPacket"
-                            },
-                            {
-                                text: "Set Title Packet",
-                                link:"/api/packets/SetTitle"
-                            },
-                            {
-                                text: "Play Sound Packet",
-                                link:"/api/packets/PlaySound"
-                            },
-                            {
-                                text: "Change Dimension Packet",
-                                link:"/api/packets/ChangeDimension"
-                            },
-                            {
-                                text: "Packets",
-                                link:"/api/packets/Packets"
-                            }
-
-                        ]
-
-                    },
-                    {
                         text: "Player",
                         link: "/api/player.md"
                     },
@@ -94,9 +67,17 @@ export default defineConfig({
                         link: "/api/client.md"
                     },
                     {
-                        text: "Inventory",
-                        link: "/api/inventory.md"
-                    }
+                        text: "Events",
+                        link: "/api/events.md"
+                    },
+                    {
+                        text: "Utils",
+                        link: "/api/util.md"
+                    },
+                    {
+                        text: "Packets",
+                        link: "/api/packets.md"
+                    },
                 ]
             },
             {
@@ -121,23 +102,6 @@ export default defineConfig({
                     {
                         text: "Example custom command",
                         link: "/examples/custom-command.md"
-                    }
-                ]
-            },
-            {
-                text: "Libs",
-                items: [
-                    {
-                        text: "ImGui",
-                        link: "/lib/ImGui.md"
-                    },
-                    {
-                        text: "Audio",
-                        link: "/lib/Audio.md"
-                    },
-                    {
-                        text: "DrawUtil",
-                        link: "/lib/DrawUtil.md"
                     }
                 ]
             }

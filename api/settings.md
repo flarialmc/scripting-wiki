@@ -1,35 +1,29 @@
-# Settings.CreateSetting
-Creates a setting. Accepts a string, number, and boolean.
+# settings.addToggle
+value boolean The current value of the setting.
 ```lua
-Settings.CreateSetting(name, value)
+settings.addToggle(name, desc, defValue) end
 ```
 
-# Settings.GetSetting
-Retrieves a setting. Accepts the name and type (string, number, boolean).
+# settings.addButton
+Adds a button setting to the ClickGUI.
 ```lua
-Settings.GetSetting(name, type)
+settings.addButton(name, desc, buttonText, callback) end
 ```
 
-# Settings.AddHeader
-Adds a header.
+# settings.addSlider
+Adds a slider setting to the ClickGUI.
 ```lua
-Settings.AddHeader(text)
+settings.addSlider(name, desc, defValue, maxValue, minValue, zerosafe) end
 ```
 
-# Settings.AddTextBox
-Adds a textbox.
+# settings.addTextBox
+Adds a text box setting to the ClickGUI.
 ```lua
-Settings.AddTextBox(settingName, textboxName, textboxDescription)
+settings.addTextBox(name, desc, defaultValue, limit) end
 ```
 
-# Settings.AddToggle
-Adds a toggle.
+# settings.addKeybind
+Adds a keybind setting to the ClickGUI.
 ```lua
-Settings.AddToggle(settingName, toggleName, toggleDescription)
-```
-
-# Settings.AddSlider
-Adds a slider with specified minimum and maximum values.
-```lua
-Settings.AddSlider(settingName, sliderName, sliderDescription, minValue, maxValue)
+settings.addKeybind(name, desc, defaultKey) end
 ```

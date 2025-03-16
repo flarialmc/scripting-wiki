@@ -1,49 +1,90 @@
-# GUI.Color
-Returns Color.
-```lua
-GUI.Color(float: r, float: g, float: b, float: a) 
-```
-<br/>
-
 :::warning
 These functions below should only be used in a RenderEvent. See more about RenderEvent [here](global.md).
 :::
 
-# GUI.RoundedRect
-Draws Rounded Rectangle on screen.
+# FlarialGUI.RoundedRect
+Draws a rounded rectangle.
 ```lua
-GUI.RoundedRect(int: x, int: y, GUI.Color: color, float: radiusX, float: radiusY, float: height, float: width)
+FlarialGUI.RoundedRect(x, y, color, width, height, radiusX, radiusY, flags)
+
+# FlarialGUI.RoundedButton
+Creates a rounded button.
+```lua
+FlarialGUI.RoundedButton(index, x, y, color, textColor, text, width, height, radiusX, radiusY, glow)
 ```
 
-# GUI.RoundedHollowRect
-Draws Hollow Rounded Rectangle on screen.
+# FlarialGUI.RoundedRectOnlyTopCorner
+Draws a rectangle with only the top corners rounded.
 ```lua
-GUI.RoundedHollowRect(int: x, int: y, GUI.Color: color,float: height float: width, float: rounding, float: shadowSize)
+FlarialGUI.RoundedRectOnlyTopCorner(x, y, color, width, height, radiusX, radiusY)
 ```
 
-# GUI.TextWithFont
-Writes text on screen.
+# FlarialGUI.Button
+Draws a simple button.
 ```lua
-GUI.TextWithFont(int: x, int: y, string: text, float: height, float: width, float: fontSize) 
-```
-:::tip
-Recommended to use constraints for font size. See more about constraints [here](constraints.md).
-:::
-
-# GUI.RoundedButton
-Draws a clickable Rounded Button on the screen.
-```lua
-GUI.RoundedButton(int: index, float: x, float: y, GUI.Color: color, GUI.Color: textColor, string: text, float: width, float: height, float: radiusX, float: radiusY, bool: glow) → boolean  
+FlarialGUI.Button(x, y, color, textColor, text, width, height)
 ```
 
-# GUI.NormalRender
-Draws moveable element 
+# FlarialGUI.LoadImageFromFile
+Loads an image from a file.
 ```lua
-GUI.NormalRender(int: index, string: text)
+FlarialGUI.LoadImageFromFile(filename, bitmap)
 ```
 
-# GUI.getCurrentScreen
-Returns current mc screen
+# FlarialGUI.FlarialText
+Draws text using the basic FlarialText function.
 ```lua
-GUI.getCurrentScreen()
+FlarialGUI.FlarialText(x, y, text, width, height, alignment)
+```
+
+# FlarialGUI.FlarialTextWithFont
+Draws text with font.
+```lua
+FlarialGUI.FlarialTextWithFont(x, y, text, width, height, alignment, fontSize)
+```
+
+# FlarialGUI.SetScrollView
+Sets the scroll view dimensions.
+```lua
+FlarialGUI.SetScrollView(x, y, width, height)
+```
+
+# FlarialGUI.UnsetScrollView
+Disables the current scroll view.
+```lua
+FlarialGUI.UnsetScrollView() end
+```
+
+# FlarialGUI.GetCenterXY
+Returns the center coordinates of a rectangle.
+```lua
+FlarialGUI.GetCenterXY(rectWidth, rectHeight) end
+```
+
+---Draws a scrollbar.
+---@param x number The x-coordinate.
+---@param y number The y-coordinate.
+---@param width number The width of the scrollbar.
+---@param height number The height of the scrollbar.
+---@param radius number The radius for rounded corners.
+```lua
+FlarialGUI.ScrollBar(x, y, width, height, radius) end
+```
+
+# FlarialGUI.SetWindowRect
+Sets the window rectangle.
+```lua
+FlarialGUI.SetWindowRect(x, y, width, height, currentNum, fixer) end
+```
+
+# FlarialGUI.UnsetWindowRect
+Resets the window rectangle to its default state.
+```lua
+FlarialGUI.UnsetWindowRect() end
+```
+
+# FlarialGUI.NormalRender
+Draws moveable element on a screen
+```lua
+FlarialGUI.NormalRender(index, text) end
 ```

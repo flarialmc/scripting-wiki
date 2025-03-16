@@ -1,35 +1,48 @@
 # Constraints.PercentageConstraint
-Calculates a percentage-based constraint.
+Computes a value based on a percentage of a specified edge’s dimension.
 ```lua
-Constraints.PercentageConstraint(float: percentage, string: edge, bool: ignore_stack)
+Constraints.PercentageConstraint(number: percentage, string: edge, boolean: ignore_stack)
 ```
 
 # Constraints.RelativeConstraint
-Calculates a relative constraint.
+Computes a relative value based on a percentage of a given dimension.
 ```lua
-Constraints.RelativeConstraint(float: percent, string: dimension, bool: ignore_stack)
+Constraints.RelativeConstraint(number: percent, string: dimension, boolean: ignore_stack)
+```
+
+# Constraints.RelativeConstraint
+Computes a relative value based on a percentage of a given dimension.
+```lua
+Constraints.RelativeConstraint(number: percent, string: dimension)
 ```
 
 # Constraints.CenterConstraint
-Calculates the center position.
+Calculates the center coordinates for a rectangle.
 ```lua
-Constraints.CenterConstraint(float: width, float: height, string: axis, float: xModifier, float: yModifier, bool: ignore_stack)
+Constraints.CenterConstraint(number: width, number: height, axis, number: xModifier, number: yModifier, boolean: ignoreStack)
 ```
 
 # Constraints.RoundingConstraint
-Calculates rounding constraints for radius X and Y.
+Calculates rounding constraints based on given radii.
 ```lua
-Constraints.RoundingConstraint(float: radiusX, float: radiusY)
+Constraints.RoundingConstraint(number: adiusX, number: radiusY)
 ```
 
-# Constraints.FontScaler
-Scales the font size based on a dimension.
+# Constraints.SpacingConstraint
+Calculates spacing based on a percentage and a dimension value.
 ```lua
-Constraints.FontScaler(float: dimension)
+Constraints.SpacingConstraint(number: percentage, string: dimension)
+```
+
+# Constraints.FontScalar
+Calculates a font scaling factor based on a given dimension.
+
+```lua
+Constraints.FontScalar(string: dimension)
 ```
 
 # Constraints.CalculatePercentage
-Calculates percentage-based positions for X and Y.W
+Calculates adjusted percentage values for a given point.
 ```lua
-Constraints.CalculatePercentage(float: x, float: y, float: adjustWidth, float: adjustHeight)
+Constraints.CalculatePercentage(number: x, number: y, number: adjustWidth, number: adjustHeight)
 ```

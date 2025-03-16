@@ -1,78 +1,33 @@
-# Player (Object)
-A datatype that represents a player in memory. 
-There are two ways of getting one:
-getLocalPlayer()
-and returnPlayerList()
-they are elaborated in this page
-:::tip
-Generally, every function that concerns manipulating/getting data about a player requires a Player object
-:::
 
-# player.getPosArray
-Gets the position of the player as a array
+# player.position
+Returns the player's position in floating point coordinates.
+Returns 0.0 if the position isn't available.
 ```lua
-player.getPosArray(Player) -> [x,y,z]
-```
-# player.getPlayerName
-
-Returns the name of the player.
-```lua
-player.getPlayerName(Player) -> string
+player.position()
 ```
 
-# player.getX
-:::warning
-Deprecated, use getPosArray instead
-:::
-Returns player's X-coordinate.
+# player.name
+Returns the player's name.
 ```lua
-player.getX(Player) -> float
+player.name() end
 ```
 
-# player.getY()
-Returns player's Y-coordinate.
-:::warning
-Deprecated, use getPosArray instead
-:::
+# player.grounded
+Returns true if the player is on the ground.
+Returns false if the player isn't available.
 ```lua
-player.getY(Player) -> float
+player.grounded()
 ```
 
-# player.getZ
-:::warning  
-Deprecated, use getPosArray instead
-:::
-Returns player's Z-coordinate.
+# player.say
+Makes the player say something in chat.
 ```lua
-player.getZ(Player) -> float
+player.say(message)
 ```
-# player.getLocalPlayer
-returns the local player (generally you)
-````lua
-player.getLocalPlayer() -> Player
-````
-# player.returnPlayerList
-returns list of players
+
+# player.rotation
+Returns the player's rotation.
+Returns (0.0, 0.0) if the player isn't available.
 ```lua
-player.getPlayerList -> [Player]
-```
-# player.isOnGround
-True/False, player is on ground.
-```lua
-Player.isOnGround(Player) -> bool
-```
-# player.getYaw
-Returns player yaw
-```lua
-Player.getYaw() -> float
-```
-# player.getPitch
-Returns player pitch
-```lua
-Player.getPitch() -> float
-```
-# player.getInventory
-Returns player inventory object
-```lua
-Player.getInventory() -> pointer
+player.rotation()
 ```
