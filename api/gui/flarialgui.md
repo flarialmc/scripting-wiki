@@ -1,11 +1,15 @@
 # `FlarialGUI` class
 
-### `FlarialGUI`
+-----
+
+## `FlarialGUI`
 ```lua
 FlarialGUI = {}
 ```
 
-### FlarialGUI.RoundedButton
+-----
+
+## `FlarialGUI.RoundedButton`
 ```lua
 function FlarialGUI.RoundedButton(index, x, y, color, textColor, text, width, height, radiusX, radiusY, glow) end
 ```
@@ -26,7 +30,9 @@ Creates a rounded button.
 #### Returns
 - boolean: True if the button was activated.
 
-### FlarialGUI.Button
+-----
+
+## `FlarialGUI.Button`
 ```lua
 function FlarialGUI.Button(x, y, color, textColor, text, width, height) end
 ```
@@ -43,7 +49,9 @@ Draws a clickable button.
 #### Returns
 - boolean: True if the button was pressed.
 
-### FlarialGUI.Image
+-----
+
+## `FlarialGUI.Image`
 ```lua
 function FlarialGUI.Image(filename, rect) end
 ```
@@ -55,7 +63,9 @@ Loads an image from a file.
 #### Returns
 - nil: 
 
-### FlarialGUI.FlarialText
+-----
+
+## `FlarialGUI.FlarialText`
 ```lua
 function FlarialGUI.FlarialText(x, y, text, width, height) end
 ```
@@ -68,7 +78,9 @@ Draws text.
 - `width`: number: The width of the text area.
 - `height`: number: The height of the text area.
 
-### FlarialGUI.FlarialTextWithFont
+-----
+
+## `FlarialGUI.FlarialTextWithFont`
 ```lua
 function FlarialGUI.FlarialTextWithFont(x, y, text, width, height, fontSize) end
 ```
@@ -84,7 +96,9 @@ Draws text with font.
 #### Returns
 - string: The resulting text (rendered text output).
 
-### FlarialGUI.NormalRender
+-----
+
+## `FlarialGUI.NormalRender`
 ```lua
 function FlarialGUI.NormalRender(index, text) end
 ```

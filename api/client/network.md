@@ -1,11 +1,15 @@
 # `network` class
 
-### `network`
+-----
+
+## `network`
 ```lua
 network = {}
 ```
 
-### network.get
+-----
+
+## `network.get`
 ```lua
 function network.get(url) end
 ```
@@ -16,7 +20,9 @@ Sends an HTTP GET request to the specified URL.
 #### Returns
 - string: The response body from the server.
 
-### network.post
+-----
+
+## `network.post`
 ```lua
 function network.post(url, data) end
 ```

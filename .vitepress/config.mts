@@ -1,12 +1,13 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-    title: "Flarial Scripting Documentation",
+    title: "Scripting Documentation",
     description: "Wiki teaching how to use Lua Scripting for Flarial Client",
     base: "/",
     cleanUrls: true,
+    head: [["link", { rel: "icon", href: "https://flarial.xyz/logo.svg" }]],
     themeConfig: {
-        logo: "https://raw.githubusercontent.com/notchyves/flarial-scripting-wiki/refs/heads/main/docs/assets/image.png",
+        logo: "https://flarial.xyz/logo.svg",
         search: {
             provider: "local"
         },

@@ -1,11 +1,15 @@
 # `Constraints` class
 
-### `Constraints`
+-----
+
+## `Constraints`
 ```lua
 Constraints = {}
 ```
 
-### Constraints.PercentageConstraint
+-----
+
+## `Constraints.PercentageConstraint`
 ```lua
 function Constraints.PercentageConstraint(percentage, edge, ignore_stack) end
 ```
@@ -18,7 +22,9 @@ Computes a value based on a percentage of a specified edge’s dimension.
 #### Returns
 - number: The computed value.
 
-### Constraints.RelativeConstraint
+-----
+
+## `Constraints.RelativeConstraint`
 ```lua
 function Constraints.RelativeConstraint(percent, dimension, ignore_stack) end
 ```
@@ -31,7 +37,9 @@ Computes a relative value based on a percentage of a given dimension.
 #### Returns
 - number: The computed relative value.
 
-### Constraints.CenterConstraint
+-----
+
+## `Constraints.CenterConstraint`
 ```lua
 function Constraints.CenterConstraint(width, height, axis, xModifier, yModifier, ignore_stack) end
 ```
@@ -47,7 +55,9 @@ Calculates the center coordinates for a rectangle.
 #### Returns
 - Vector2: Returns a vector2 representing the center coordinates.
 
-### Constraints.RoundingConstraint
+-----
+
+## `Constraints.RoundingConstraint`
 ```lua
 function Constraints.RoundingConstraint(radiusX, radiusY) end
 ```
@@ -59,7 +69,9 @@ Calculates rounding constraints based on given radii.
 #### Returns
 - Vector2: Returns a vector2 representing the rounding values.
 
-### Constraints.SpacingConstraint
+-----
+
+## `Constraints.SpacingConstraint`
 ```lua
 function Constraints.SpacingConstraint(percentage, dimension) end
 ```
@@ -71,7 +83,9 @@ Calculates spacing based on a percentage and a dimension value.
 #### Returns
 - number: The computed spacing value.
 
-### Constraints.FontScalar
+-----
+
+## `Constraints.FontScalar`
 ```lua
 function Constraints.FontScalar(dimension) end
 ```
@@ -82,7 +96,9 @@ Calculates a font scaling factor based on a given dimension.
 #### Returns
 - number: The font scale factor.
 
-### Constraints.CalculatePercentage
+-----
+
+## `Constraints.CalculatePercentage`
 ```lua
 function Constraints.CalculatePercentage(x, y, adjustWidth, adjustHeight) end
 ```

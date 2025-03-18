@@ -1,11 +1,15 @@
 # `event` class
 
-### `event`
+-----
+
+## `event`
 ```lua
 event = {}
 ```
 
-### onEvent
+-----
+
+## `onEvent`
 ```lua
 function onEvent(eventName, handler) end
 ```

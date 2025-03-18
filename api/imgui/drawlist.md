@@ -1,11 +1,15 @@
 # `ImDrawList` class
 
-### `ImDrawList`
+-----
+
+## `ImDrawList`
 ```lua
 ImDrawList = {}
 ```
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddLine(p1, p2, color, thickness) end
 ```
@@ -19,7 +23,9 @@ Adds a line to the draw list.
 #### Returns
 - nil: 
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddRect(p1, p2, color, rounding, thickness, flags) end
 ```
@@ -33,7 +39,9 @@ Adds a rectangle outline.
 - `thickness`: number|nil: The line thickness.
 - `flags`: ImDrawList|nil: The drawlist flags.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddRectFilled(p1, p2, color, rounding, flags) end
 ```
@@ -46,7 +54,9 @@ Adds a filled rectangle.
 - `rounding`: number|nil: The corner rounding.
 - `flags`: ImDrawList|nil: The drawlist flags.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddCircle(center, radius, color, numSegments, thickness) end
 ```
@@ -59,7 +69,9 @@ Adds a circle outline.
 - `numSegments`: number|nil: Number of segments.
 - `thickness`: number|nil: The outline thickness.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddCircleFilled(center, radius, color, numSegments) end
 ```
@@ -71,7 +83,9 @@ Adds a filled circle.
 - `color`: table: The fill color.
 - `numSegments`: number|nil: Number of segments.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddText(pos, color, font_size, text) end
 ```
@@ -83,7 +97,9 @@ Adds text to the draw list with a custom font size.
 - `font_size`: number: The font size in pixels.
 - `text`: string: The text to display.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddTriangleFilled(p1, p2, p3, color) end
 ```
@@ -95,7 +111,9 @@ Adds a filled triangle.
 - `p3`: table: The third vertex.
 - `color`: table: The fill color.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddTriangle(p1, p2, p3, color, thickness) end
 ```
@@ -108,7 +126,9 @@ Adds a triangle outline.
 - `color`: table: The triangle color.
 - `thickness`: number: The line thickness.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddQuadFilled(p1, p2, p3, p4, color) end
 ```
@@ -121,7 +141,9 @@ Adds a filled quadrilateral.
 - `p4`: table: The fourth vertex.
 - `color`: table: The fill color.
 
-### ImDrawList
+-----
+
+## `ImDrawList`
 ```lua
 function ImDrawList:AddQuad(p1, p2, p3, p4, color, thickness) end
 ```

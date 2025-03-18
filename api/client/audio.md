@@ -1,11 +1,15 @@
 # `audio` class
 
-### `audio`
+-----
+
+## `audio`
 ```lua
 audio = {}
 ```
 
-### audio.play
+-----
+
+## `audio.play`
 ```lua
 function audio.play(file) end
 ```

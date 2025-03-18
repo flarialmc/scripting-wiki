@@ -1,4 +1,6 @@
-### `name`
+-----
+
+## `name`
 **Type:** string
 
 The unique name of the module/command (required).
@@ -9,7 +11,9 @@ Example: name = "Flarial"
 name = ""
 ```
 
-### `description`
+-----
+
+## `description`
 **Type:** string
 
 The description of the module/command (required).
@@ -19,7 +23,9 @@ Example: description = "Flarial Description"
 description = ""
 ```
 
-### `author`
+-----
+
+## `author`
 **Type:** string
 
 The name of the module/command's author (optional).
@@ -30,7 +36,9 @@ Example: author = "skinStandardCust"
 author = ""
 ```
 
-### `debug`
+-----
+
+## `debug`
 **Type:** boolean
 
 Enables or disables debug mode (optional).
@@ -41,7 +49,9 @@ Example: debug = true
 debug = false
 ```
 
-### `aliases`
+-----
+
+## `aliases`
 **Type:** string[]
 
 A list of optional aliases for command scripts.
@@ -53,7 +63,9 @@ Example: aliases = {"cmd", "command"}
 aliases = {}
 ```
 
-### execute
+-----
+
+## `execute`
 ```lua
 function execute(args) end
 ```
@@ -64,7 +76,9 @@ Called when the command is executed.
 #### Returns
 - nil: 
 
-### onEnable
+-----
+
+## `onEnable`
 ```lua
 function onEnable() end
 ```
@@ -73,7 +87,9 @@ Called when the module script is enabled via the ClickGUI.
 #### Returns
 - nil: 
 
-### onDisable
+-----
+
+## `onDisable`
 ```lua
 function onDisable() end
 ```
@@ -82,7 +98,9 @@ Called when the module script is disabled via the ClickGUI.
 #### Returns
 - nil: 
 
-### onLoad
+-----
+
+## `onLoad`
 ```lua
 function onLoad() end
 ```

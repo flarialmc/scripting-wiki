@@ -1,132 +1,182 @@
 # `Packets` class
 
-### `Packets`
+-----
+
+## `Packets`
 ```lua
 Packets = {}
 ```
 
 # `PacketIds` class
 
-### `PacketIds`
+-----
+
+## `PacketIds`
 ```lua
 PacketIds = {
 ```
 
-### `KeepAlive`
+-----
+
+## `KeepAlive`
 ```lua
 KeepAlive = 0x0,
 ```
 
-### `Login`
+-----
+
+## `Login`
 ```lua
 Login = 0x1,
 ```
 
-### `PlayStatus`
+-----
+
+## `PlayStatus`
 ```lua
 PlayStatus = 0x2,
 ```
 
-### `Text`
+-----
+
+## `Text`
 ```lua
 Text = 0x9,
 ```
 
-### `SetTime`
+-----
+
+## `SetTime`
 ```lua
 SetTime = 0xA,
 ```
 
-### `StartGame`
+-----
+
+## `StartGame`
 ```lua
 StartGame = 0xB,
 ```
 
-### `MovePlayer`
+-----
+
+## `MovePlayer`
 ```lua
 MovePlayer = 0x13,
 ```
 
-### `PlayerAction`
+-----
+
+## `PlayerAction`
 ```lua
 PlayerAction = 0x24,
 ```
 
-### `InventoryTransaction`
+-----
+
+## `InventoryTransaction`
 ```lua
 InventoryTransaction = 0x1E,
 ```
 
-### `Respawn`
+-----
+
+## `Respawn`
 ```lua
 Respawn = 0x2D,
 ```
 
-### `BlockPickRequest`
+-----
+
+## `BlockPickRequest`
 ```lua
 BlockPickRequest = 0x22,
 ```
 
-### `SetActorData`
+-----
+
+## `SetActorData`
 ```lua
 SetActorData = 0x27,
 ```
 
-### `SetActorMotion`
+-----
+
+## `SetActorMotion`
 ```lua
 SetActorMotion = 0x28,
 ```
 
-### `SetHealth`
+-----
+
+## `SetHealth`
 ```lua
 SetHealth = 0x2A,
 ```
 
-### `Animate`
+-----
+
+## `Animate`
 ```lua
 Animate = 0x2C,
 ```
 
-### `PlayerEquipment`
+-----
+
+## `PlayerEquipment`
 ```lua
 PlayerEquipment = 0x1F,
 ```
 
-### `UpdateBlock`
+-----
+
+## `UpdateBlock`
 ```lua
 UpdateBlock = 0x15,
 ```
 
-### `PlayerList`
+-----
+
+## `PlayerList`
 ```lua
 PlayerList = 0x3F,
 ```
 
-### `CommandRequest`
+-----
+
+## `CommandRequest`
 ```lua
 CommandRequest = 0x4D,
 ```
 
-### `GameRulesChanged`
+-----
+
+## `GameRulesChanged`
 ```lua
 GameRulesChanged = 0x48,
 ```
 
-### `StopSound`
+-----
+
+## `StopSound`
 ```lua
 StopSound = 0x57
 ```
 
 # `Packet` class
 
-### `Packet`
+-----
+
+## `Packet`
 Represents a network packet.
 
 ```lua
 Packet = {}
 ```
 
-### Packet
+-----
+
+## `Packet`
 ```lua
 function Packet:getId() end
 ```

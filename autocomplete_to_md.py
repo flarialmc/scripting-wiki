@@ -51,7 +51,7 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
             match = re.search(r"function\s+([a-zA-Z0-9_.]+)", line)
             if match:
                 funcname = match.group(1)
-                markdown += f"\n### {funcname}\n"
+                markdown += f"\n-----\n\n## `{funcname}`\n"
                 markdown += f"```lua\n{line}\n```\n"
                 if current_doc["description"]:
                     markdown += current_doc["description"].strip() + "\n\n"
@@ -62,7 +62,9 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
                 if current_doc["returns"]:
                     markdown += "#### Returns\n"
                     for ret in current_doc["returns"]:
-                        markdown += f"- {ret['type']}: {ret['desc']}\n"
+                        ret_type = ret["type"]
+                        ret_desc = ret["desc"]
+                        markdown += f"- {ret_type}: {ret_desc}\n"
                 # Reset documentation accumulator
                 current_doc = {
                     "description": "",
@@ -75,7 +77,7 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
             match = re.match(r"^\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*.*", line)
             if match:
                 varname = match.group(1)
-                markdown += f"\n### `{varname}`\n"
+                markdown += f"\n-----\n\n## `{varname}`\n"
                 if current_doc["type"]:
                     markdown += f"**Type:** {current_doc['type']}\n\n"
                 if current_doc["description"]:
@@ -90,6 +92,8 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
                 }
 
     return markdown.strip()
+
+
 # File processing remains unchanged
 p = Path('./autocomplete')
 for f in p.glob('**/*.lua'):
