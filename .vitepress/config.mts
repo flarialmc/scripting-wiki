@@ -42,42 +42,22 @@ export default defineConfig({
             {
                 text: "API",
                 items: [
-                    {
-                        text: "Constraints",
-                        link: "/api/constraints.md"
-                    },
-                    {
-                        text: "Global",
-                        link: "/api/global.md"
-                    },
-                    {
-                        text: "GUI",
-                        link: "/api/gui.md"
-                    },
-                    {
-                        text: "Player",
-                        link: "/api/player.md"
-                    },
-                    {
-                        text: "Settings",
-                        link: "/api/settings.md"
-                    },
-                    {
-                        text: "Client",
-                        link: "/api/client.md"
-                    },
-                    {
-                        text: "Events",
-                        link: "/api/events.md"
-                    },
-                    {
-                        text: "Utils",
-                        link: "/api/util.md"
-                    },
-                    {
-                        text: "Packets",
-                        link: "/api/packets.md"
-                    },
+                    { text: "Script", link: "/api/script.md" },
+                    { text: "Audio", link: "/api/audio.md" },
+                    { text: "Client", link: "/api/client.md" },
+                    { text: "Network", link: "/api/network.md" },
+                    { text: "Events", link: "/api/events.md" },
+                    { text: "Packets", link: "/api/packets.md" },
+                    { text: "Player", link: "/api/player.md" },
+                    { text: "Constraints", link: "/api/constraints.md" },
+                    { text: "Flarialgui", link: "/api/flarialgui.md" },
+                    { text: "Settings", link: "/api/settings.md" },
+                    { text: "Drawlist", link: "/api/drawlist.md" },
+                    { text: "Imgui", link: "/api/imgui.md" },
+                    { text: "Fs", link: "/api/fs.md" },
+                    { text: "Globals", link: "/api/globals.md" },
+                    { text: "Objects", link: "/api/objects.md" },
+                    { text: "Utils", link: "/api/util.md" }
                 ]
             },
             {

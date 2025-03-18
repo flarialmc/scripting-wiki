@@ -100,3 +100,42 @@ for f in p.glob('**/*.lua'):
     with open(path, 'w') as ff:
         ff.write(parse_lua_doc(f"{f.read_text()}", f)+f"\n\nReference: [{f.name}](https://github.com/flarialmc/scripting-wiki/tree/main/{f.as_posix().replace('%5c', '/')})")
         print(f"Created {path}")
+
+api_dir = Path('./api')
+api_files = [f.stem for f in api_dir.glob('**/*.md')]
+
+# Step 2: Define display name mappings for special cases
+display_names = {
+    "util": "Utils",  # Special case: util.md becomes "Utils"
+}
+
+# Generate the sidebar items
+items = []
+for file in api_files:
+    display_name = display_names.get(file, file.capitalize())  # Use mapping or capitalize first letter
+    link = f"/api/{file}.md"
+    items.append(f'{{ text: "{display_name}", link: "{link}" }}')
+
+# Format the items string with proper indentation
+items_str = ",\n                    ".join(items)
+
+# Step 3: Read the current config.mts file
+with open('./.vitepress/config.mts', 'r') as f:
+    config_content = f.read()
+
+# Find and replace the API section's items array
+pattern = r'(\{\s*text:\s*"API",\s*items:\s*\[)(.*?)(\]\s*\},)'
+match = re.search(pattern, config_content, re.DOTALL)
+if match:
+    # Construct the new API section with updated items
+    new_section = f'{match.group(1)}\n                    {items_str}\n                {match.group(3)}'
+    # Replace the old section with the new one
+    updated_config = config_content[:match.start()] + new_section + config_content[match.end():]
+else:
+    raise Exception("Could not find the 'API' section in config.mts")
+
+# Write the updated content back to config.mts
+with open('./.vitepress/config.mts', 'w') as f:
+    f.write(updated_config)
+
+print("Successfully updated ./.vitepress/config.mts with the current API documentation.")
