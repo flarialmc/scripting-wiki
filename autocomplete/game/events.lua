@@ -1,0 +1,72 @@
+---@meta
+
+---@class event
+event = {}
+
+---Registers an event handler for a specified event.
+---You can bind a function to one of several built-in events.
+---The handler may cancel some events by returning true.
+---
+---Called whenever a key is pressed or released  
+---key: The key number, use util.keyToString to get the key string.  
+---action: The state of the key where:  
+---0 = released  
+---1 = pressed  
+---You can cancel this event by returning true.  
+---onEvent("KeyEvent", function(key, action)
+---
+---end)
+---
+---Called whenever the mouse moves or is clicked.  
+---button: The button where:  
+---1 = Left Click  
+---2 = Right Click  
+---3 = Middle Click  
+---4 = Mouse Scroll  
+---action: The state of the click where:  
+---0 = released  
+---1 = pressed  
+---You can cancel this event by returning true.  
+---onEvent("MouseEvent", function(button, action)
+---
+---end)
+---
+---Called whenever the client receives a network packet.
+---packet: The packet.  
+---id: The id.  
+---You can cancel this event by returning true.  
+---onEvent("PacketReceiveEvent", function(packet, id)
+---
+---end)
+---
+---Called when the client is in a world/server.  
+---onEvent("TickEvent", function()
+---
+---end)
+---
+---Use this event to render ImGui.  
+---Accessing player functions is NOT safe in this event.  
+---onEvent("RenderEvent", function()
+---
+---end)
+---
+---Use this event to render Tesselator or if you need a fast loop.  
+---Rendering ImGui is NOT safe in this event.  
+---Accessing player functions is safe in this event.  
+---onEvent("SetupAndRenderEvent", function()
+---
+---end)
+---
+---Called whenever the client receives a chat message.
+---message: The chat message.
+---name: The name of the sender.
+---type: The type of chat message, refer to 
+---xuid: The xuid of the sender.
+---onEvent("ChatReceiveEvent", function(message, name, type, xuid)
+---
+---end)
+---
+---@param eventName string | '"KeyEvent", function(key, action)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"PacketReceiveEvent", function(packet, id)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type, xuid)\n\t\nend' The name of the event to listen to.
+---@param handler function The function that will handle the event.
+---@return nil
+function onEvent(eventName, handler) end
