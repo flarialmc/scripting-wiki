@@ -4,6 +4,7 @@ export default defineConfig({
     title: "Flarial Scripting Documentation",
     description: "Wiki teaching how to use Lua Scripting for Flarial Client",
     base: "/",
+    cleanUrls: true,
     themeConfig: {
         logo: "https://raw.githubusercontent.com/notchyves/flarial-scripting-wiki/refs/heads/main/docs/assets/image.png",
         search: {
