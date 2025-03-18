@@ -42,22 +42,22 @@ export default defineConfig({
             {
                 text: "API",
                 items: [
-                    { text: "Script", link: "/api/script.md" },
-                    { text: "Audio", link: "/api/audio.md" },
-                    { text: "Client", link: "/api/client.md" },
-                    { text: "Network", link: "/api/network.md" },
-                    { text: "Events", link: "/api/events.md" },
-                    { text: "Packets", link: "/api/packets.md" },
-                    { text: "Player", link: "/api/player.md" },
-                    { text: "Constraints", link: "/api/constraints.md" },
-                    { text: "Flarialgui", link: "/api/flarialgui.md" },
-                    { text: "Settings", link: "/api/settings.md" },
-                    { text: "Drawlist", link: "/api/drawlist.md" },
-                    { text: "Imgui", link: "/api/imgui.md" },
-                    { text: "Fs", link: "/api/fs.md" },
-                    { text: "Globals", link: "/api/globals.md" },
-                    { text: "Objects", link: "/api/objects.md" },
-                    { text: "Utils", link: "/api/util.md" }
+                    { text: "script", link: "api/script.md" },
+                    { text: "audio", link: "api/client/audio.md" },
+                    { text: "client", link: "api/client/client.md" },
+                    { text: "network", link: "api/client/network.md" },
+                    { text: "events", link: "api/game/events.md" },
+                    { text: "packets", link: "api/game/packets.md" },
+                    { text: "player", link: "api/game/player.md" },
+                    { text: "constraints", link: "api/gui/constraints.md" },
+                    { text: "flarialgui", link: "api/gui/flarialgui.md" },
+                    { text: "settings", link: "api/gui/settings.md" },
+                    { text: "drawlist", link: "api/imgui/drawlist.md" },
+                    { text: "imgui", link: "api/imgui/imgui.md" },
+                    { text: "fs", link: "api/misc/fs.md" },
+                    { text: "globals", link: "api/misc/globals.md" },
+                    { text: "objects", link: "api/misc/objects.md" },
+                    { text: "util", link: "api/misc/util.md" }
                 ]
             },
             {

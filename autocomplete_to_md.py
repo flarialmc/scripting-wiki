@@ -102,7 +102,7 @@ for f in p.glob('**/*.lua'):
         print(f"Created {path}")
 
 api_dir = Path('./api')
-api_files = [f.stem for f in api_dir.glob('**/*.md')]
+api_files = [str(f.as_posix()) for f in api_dir.glob('**/*.md')]
 
 # Step 2: Define display name mappings for special cases
 display_names = {
@@ -113,8 +113,8 @@ display_names = {
 items = []
 for file in api_files:
     display_name = display_names.get(file, file.capitalize())  # Use mapping or capitalize first letter
-    link = f"/api/{file}.md"
-    items.append(f'{{ text: "{display_name}", link: "{link}" }}')
+    link = file
+    items.append(f'{{ text: "{display_name[:-3].split("/")[-1]}", link: "{link}" }}')
 
 # Format the items string with proper indentation
 items_str = ",\n                    ".join(items)
