@@ -126,7 +126,7 @@ Represents a network packet.
 Packet = {}
 ```
 
-### `Packet`
+### Packet
 ```lua
 function Packet:getId() end
 ```

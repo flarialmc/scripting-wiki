@@ -5,7 +5,7 @@
 player = {}
 ```
 
-### `player.position`
+### player.position
 ```lua
 function player.position() end
 ```
@@ -17,7 +17,7 @@ Returns 0.0f if the position isn't available.
 - number: y The y coordinate.
 - number: z The z coordinate.
 
-### `player.name`
+### player.name
 ```lua
 function player.name() end
 ```
@@ -27,7 +27,7 @@ Returns an empty string if the name isn't available.
 #### Returns
 - string: The player's name.
 
-### `player.grounded`
+### player.grounded
 ```lua
 function player.grounded() end
 ```
@@ -37,7 +37,7 @@ Returns false if the player isn't available.
 #### Returns
 - boolean: True if the player is on the ground.
 
-### `player.say`
+### player.say
 ```lua
 function player.say(message) end
 ```
@@ -48,7 +48,7 @@ Makes the player say something in chat.
 #### Returns
 - nil: 
 
-### `player.executeCommand`
+### player.executeCommand
 ```lua
 function player.executeCommand(command) end
 ```
@@ -57,7 +57,7 @@ Executes a server command.
 #### Parameters
 - `command`: string: The command without '/'
 
-### `player.rotation`
+### player.rotation
 ```lua
 function player.rotation() end
 ```

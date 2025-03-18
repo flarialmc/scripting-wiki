@@ -5,7 +5,7 @@
 globals = {}
 ```
 
-### `log`
+### log
 ```lua
 function log(...) end
 ```
@@ -14,7 +14,7 @@ Prints a message to the console.
 #### Returns
 - nil: 
 
-### `registerCommand`
+### registerCommand
 ```lua
 function registerCommand(name, callback) end
 ```

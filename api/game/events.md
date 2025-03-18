@@ -5,7 +5,7 @@
 event = {}
 ```
 
-### `onEvent`
+### onEvent
 ```lua
 function onEvent(eventName, handler) end
 ```

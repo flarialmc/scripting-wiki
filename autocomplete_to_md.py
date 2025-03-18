@@ -51,7 +51,7 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
             match = re.search(r"function\s+([a-zA-Z0-9_.]+)", line)
             if match:
                 funcname = match.group(1)
-                markdown += f"\n### `{funcname}`\n"
+                markdown += f"\n### {funcname}\n"
                 markdown += f"```lua\n{line}\n```\n"
                 if current_doc["description"]:
                     markdown += current_doc["description"].strip() + "\n\n"

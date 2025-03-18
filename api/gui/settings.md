@@ -13,7 +13,7 @@ settings = {}
 
 # `KeybindSetting` class
 
-### `settings.addToggle`
+### settings.addToggle
 ```lua
 function settings.addToggle(name, desc, defValue) end
 ```
@@ -26,7 +26,7 @@ Adds a toggle setting to the ClickGUI.
 #### Returns
 - BoolSetting: The created setting object with a `value` field.
 
-### `settings.addSlider`
+### settings.addSlider
 ```lua
 function settings.addSlider(name, desc, defValue, maxValue, minValue, zerosafe) end
 ```
@@ -42,7 +42,7 @@ Adds a slider setting to the ClickGUI.
 #### Returns
 - SliderSetting: The created setting object with a `value` field.
 
-### `settings.addTextBox`
+### settings.addTextBox
 ```lua
 function settings.addTextBox(name, desc, defaultValue, limit) end
 ```
@@ -56,7 +56,7 @@ Adds a text box setting to the ClickGUI.
 #### Returns
 - TextBoxSetting: The created setting object with a `value` field.
 
-### `settings.addKeybind`
+### settings.addKeybind
 ```lua
 function settings.addKeybind(name, desc, defaultKey) end
 ```

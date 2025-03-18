@@ -5,7 +5,7 @@
 client = {}
 ```
 
-### `client.notify`
+### client.notify
 ```lua
 function client.notify(message) end
 ```
@@ -16,7 +16,7 @@ Displays a notification on your screen.
 #### Returns
 - nil: 
 
-### `client.crash`
+### client.crash
 ```lua
 function client.crash() end
 ```
@@ -25,7 +25,7 @@ Crashes the game.
 #### Returns
 - nil: 
 
-### `client.freeMouse`
+### client.freeMouse
 ```lua
 function client.freeMouse() end
 ```
@@ -34,7 +34,7 @@ Frees your mouse.
 #### Returns
 - nil: 
 
-### `client.grabMouse`
+### client.grabMouse
 ```lua
 function client.grabMouse() end
 ```
@@ -43,7 +43,7 @@ Grabs your mouse.
 #### Returns
 - nil: 
 
-### `client.getScreenName`
+### client.getScreenName
 ```lua
 function client.getScreenName() end
 ```

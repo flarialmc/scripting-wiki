@@ -5,7 +5,7 @@
 util = {}
 ```
 
-### `util.keyToString`
+### util.keyToString
 ```lua
 function util.keyToString(key, isCapital, isKeybind) end
 ```
@@ -18,7 +18,7 @@ Converts a key code to its string representation.
 #### Returns
 - string: The key as a string.
 
-### `util.setClipboard`
+### util.setClipboard
 ```lua
 function util.setClipboard(text) end
 ```
@@ -29,7 +29,7 @@ Sets the clipboard content.
 #### Returns
 - nil: 
 
-### `util.getClipboard`
+### util.getClipboard
 ```lua
 function util.getClipboard() end
 ```

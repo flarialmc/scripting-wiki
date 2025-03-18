@@ -53,7 +53,7 @@ Example: aliases = {"cmd", "command"}
 aliases = {}
 ```
 
-### `execute`
+### execute
 ```lua
 function execute(args) end
 ```
@@ -64,7 +64,7 @@ Called when the command is executed.
 #### Returns
 - nil: 
 
-### `onEnable`
+### onEnable
 ```lua
 function onEnable() end
 ```
@@ -73,7 +73,7 @@ Called when the module script is enabled via the ClickGUI.
 #### Returns
 - nil: 
 
-### `onDisable`
+### onDisable
 ```lua
 function onDisable() end
 ```
@@ -82,7 +82,7 @@ Called when the module script is disabled via the ClickGUI.
 #### Returns
 - nil: 
 
-### `onLoad`
+### onLoad
 ```lua
 function onLoad() end
 ```
