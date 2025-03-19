@@ -22,7 +22,7 @@ Prints a message to the console.
 
 ## `registerCommand`
 ```lua
-function registerCommand(name, callback) end
+function registerCommand(name, description, callback) end
 ```
 Registers a command in module scripts.
 Do not call this function in the global scope, you
@@ -30,6 +30,7 @@ can call it in onLoad() or in any other safe function.
 
 #### Parameters
 - `name`: string: The name of the command, without spaces.
+- `description`: string: The description of the command.
 - `callback`: fun(args:: table) The function to execute when the command is called.
 #### Returns
 - nil:
