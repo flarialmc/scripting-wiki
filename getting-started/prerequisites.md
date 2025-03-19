@@ -1,38 +1,25 @@
-# Prerequisites
+# Prerequisites for Flarial Scripting
 
-Flarial Scripting is pretty flexible with how you can do it. However, here are some recommended settings for you to use.
+While you can create scripts with any text editor, we strongly recommend using Visual Studio Code.
 
-## IDE
-You can use [Visual Studio Code](https://code.visualstudio.com), which is most recommended, but you can also use other IDEs you are more comfortable with such as Lite XL, or Sublime Text.
-::: tip
-We are currently working on a Visual Studio Code script that you can use that allows for better auto-complete for faster creation of scripts.
-:::
+### Installation Guide
+1. [Download and install Visual Studio Code](https://code.visualstudio.com/).
+2. Open Visual Studio Code and navigate to the Extensions Marketplace.
+3. Search for **Lua** and install the extension by **sumneko**.
 
-## Beginnings of Script
-When you go to the script folder, you will want to make a new folder, preferably with the name of your script just for better organization. Then you will want to have two files:
-- main.json
-- main.lua
+## Setting Up Autocomplete
+To enable autocompletion for Flarial, follow these steps:
 
-In your main.json you want to have:
-```json
-{
-    "name": "Flarial Scripting Test Module",
-    "description": "Flarial Scripting Test Module Description",
-    "main_class": "main.lua", // the base of your script
-    "api_revision": 2 //api version 
-}
-```
+1. Inject Flarial and type `.lua autocomplete` in the chat, this will install the latest autocomplete files.
+2. Open Visual Studio Code and go to the **Extensions Settings** for the Lua extension.
+3. Search for **User Third Party** (this setting is located near the bottom).
+4. Add the following directory path:
+   ```
+   %localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial\Scripts\AutoComplete
+   ```
+5. Save your settings.
 
-In your main.lua:
-```lua
-function onEnable()
-    Notify("Script Enabled")
-end
+### Important Note
+For autocompletion to work correctly, ensure that you open the entire **Scripts** folder in Visual Studio Code rather than just an individual script file.
 
-function onDisable()
-    Notify("Script Disabled")
-end
-```
-
-## Testing
-Now when you open Flarial Client with this script, you should see a notification on enabling and disabling this module.
+With these steps completed, you’ll have full access to all Flarial functions through autocompletion, making scripting way easier!

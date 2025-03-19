@@ -36,9 +36,9 @@ export default defineConfig({
                         link: "/getting-started/prerequisites.md"
                     },
                     {
-                        text: "VSCode Extension",
-                        link: "/getting-started/vscode-extension.md"
-                    }
+                        text: "First Script",
+                        link: "/getting-started/first_script.md"
+                    },
                 ]
             },
             {
