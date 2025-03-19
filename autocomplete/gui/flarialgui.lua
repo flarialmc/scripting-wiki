@@ -13,12 +13,6 @@ FlarialGUI = {}
 ---@return boolean True if the button was pressed.
 function FlarialGUI.Button(pos, color, textColor, text, width, height) end
 
----Loads an image from a file.
----@param file string The file path, relative to the Flarial folder.
----@param rect table The position of the image.
----@return nil
-function FlarialGUI.Image(file, rect) end
-
 ---Draws text on your screen.
 ---@param pos table The position of the button.
 ---@param text string The text to display.

@@ -27,20 +27,6 @@ Draws a clickable button.
 
 -----
 
-## `FlarialGUI.Image`
-```lua
-function FlarialGUI.Image(file, rect) end
-```
-Loads an image from a file.
-
-#### Parameters
-- `file`: string: The file path, relative to the Flarial folder.
-- `rect`: table: The position of the image.
-#### Returns
-- nil: 
-
------
-
 ## `FlarialGUI.Text`
 ```lua
 function FlarialGUI.Text(pos, text, width, height, fontSize) end

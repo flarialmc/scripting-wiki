@@ -9,11 +9,9 @@ event = {}
 ---
 ---Called whenever a key is pressed or released  
 ---key: The key number, use util.keyToString to get the key string.  
----action: The state of the key where:  
----0 = released  
----1 = pressed  
+---down: True if the key is pressed.  
 ---You can cancel this event by returning true.  
----onEvent("KeyEvent", function(key, action)
+---onEvent("KeyEvent", function(key, down)
 ---
 ---end)
 ---
@@ -23,35 +21,29 @@ event = {}
 ---2 = Right Click  
 ---3 = Middle Click  
 ---4 = Mouse Scroll  
----action: The state of the click where:  
----0 = released  
----1 = pressed  
+---action: The action of the button where:  
+---1 = Down
+---2 = Release
+---3 = Scroll Up
+---4 = Scroll Down
 ---You can cancel this event by returning true.  
 ---onEvent("MouseEvent", function(button, action)
 ---
 ---end)
 ---
----Called whenever the client receives a network packet.
----packet: The packet.  
----id: The id.  
----You can cancel this event by returning true.  
----onEvent("PacketReceiveEvent", function(packet, id)
----
----end)
----
----Called when the client is in a world/server.  
+---Called every game tick when the client is in a world/server.  
 ---onEvent("TickEvent", function()
 ---
 ---end)
 ---
----Use this event to render ImGui.  
+---Use this event to render ImGui and FlarialGUI.  
 ---Accessing player functions is NOT safe in this event.  
 ---onEvent("RenderEvent", function()
 ---
 ---end)
 ---
----Use this event to render Tesselator or if you need a fast loop.  
----Rendering ImGui is NOT safe in this event.  
+---Use this event if you need a faster loop than TickEvent.  
+---Rendering ImGui or FlarialGUI is NOT safe in this event.  
 ---Accessing player functions is safe in this event.  
 ---onEvent("SetupAndRenderEvent", function()
 ---
@@ -60,13 +52,13 @@ event = {}
 ---Called whenever the client receives a chat message.
 ---message: The chat message.
 ---name: The name of the sender.
----type: The type of chat message, refer to 
----xuid: The xuid of the sender.
----onEvent("ChatReceiveEvent", function(message, name, type, xuid)
+---type: The type of chat message, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_text
+---You can cancel this event by returning true.  
+---onEvent("ChatReceiveEvent", function(message, name, type)
 ---
 ---end)
 ---
----@param eventName string | '"KeyEvent", function(key, action)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"PacketReceiveEvent", function(packet, id)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type, xuid)\n\t\nend' The name of the event to listen to.
+---@param eventName string | '"KeyEvent", function(key, down)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type)\n\t\nend' The name of the event to listen to.
 ---@param handler function The function that will handle the event.
 ---@return nil
 function onEvent(eventName, handler) end

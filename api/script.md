@@ -3,7 +3,7 @@
 ## `name`
 **Type:** string
 
-The unique name of the module/command (required).
+The name of the module/command (required).
 Spaces are not allowed in command names.
 Example: name = "Flarial"
 
