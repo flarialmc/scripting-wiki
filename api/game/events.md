@@ -31,7 +31,7 @@ button: The button where:
 2 = Right Click
 3 = Middle Click
 4 = Mouse Scroll
-action: The action of the mouse where:
+action: The action of the button where:
 1 = Down
 2 = Release
 3 = Scroll Up
@@ -68,8 +68,17 @@ onEvent("ChatReceiveEvent", function(message, name, type)
 
 end)
 
+Called whenever the player sends a message.
+message: The chat message.
+name: The name of the sender.
+type: The type of chat message, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_text
+You can cancel this event by returning true.
+onEvent("ChatSendEvent", function(message, name, type)
+
+end)
+
 #### Parameters
-- `eventName`: string: | '"KeyEvent", function(key, down)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type)\n\t\nend' The name of the event to listen to.
+- `eventName`: string: | '"KeyEvent", function(key, down)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type)\n\t\nend' | '"ChatSendEvent", function(message, name, type)\n\t\nend' The name of the event to listen to.
 - `handler`: function: The function that will handle the event.
 #### Returns
 - nil:
