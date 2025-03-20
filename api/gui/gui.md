@@ -1,24 +1,24 @@
-# `FlarialGUI` class
+# `gui` class
 
 -----
 
-## `FlarialGUI`
+## `gui`
 ```lua
-FlarialGUI = {}
+gui = {}
 ```
 
 -----
 
-## `FlarialGUI.Button`
+## `gui.button`
 ```lua
-function FlarialGUI.Button(pos, color, textColor, text, width, height) end
+function gui.button(pos, color, textColor, text, width, height) end
 ```
 Draws a clickable button.
 
 #### Parameters
 - `pos`: table: The position of the button.
-- `color`: table: The background button color (RGBA format, 0-255).
-- `textColor`: table: The button text color (RGBA format, 0-255).
+- `color`: table: The background button color ({R, G, B, A} 0-255).
+- `textColor`: table: The button text color ({R, G, B, A} 0-255).
 - `text`: string: The button text.
 - `width`: number|nil: The width of the button.
 - `height`: number|nil: The height of the button.
@@ -27,9 +27,9 @@ Draws a clickable button.
 
 -----
 
-## `FlarialGUI.Text`
+## `gui.text`
 ```lua
-function FlarialGUI.Text(pos, text, width, height, fontSize) end
+function gui.text(pos, text, width, height, fontSize) end
 ```
 Draws text on your screen.
 
@@ -42,14 +42,14 @@ Draws text on your screen.
 
 -----
 
-## `FlarialGUI.Render`
+## `gui.render`
 ```lua
-function FlarialGUI.Render(text, index) end
+function gui.render(text, index) end
 ```
-Renders a movable rectangle.
+Draws a movable rectangle.
 
 #### Parameters
 - `text`: string: The text inside the rectangle.
 - `index`: number|nil: The unique index, default is 0.
 
-Reference: [flarialgui.lua](https://github.com/flarialmc/scripting-wiki/tree/main/autocomplete/gui/flarialgui.lua)
+Reference: [gui.lua](https://github.com/flarialmc/scripting-wiki/tree/main/autocomplete/gui/gui.lua)
