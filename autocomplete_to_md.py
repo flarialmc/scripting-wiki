@@ -105,41 +105,96 @@ for f in p.glob('**/*.lua'):
         ff.write(parse_lua_doc(f"{f.read_text()}", f)+f"\n\nReference: [{f.name}](https://github.com/flarialmc/scripting-wiki/tree/main/{f.as_posix().replace('%5c', '/')})")
         print(f"Created {path}")
 
+
+
 api_dir = Path('./api')
-api_files = [str(f.as_posix()) for f in api_dir.glob('**/*.md')]
+if not api_dir.exists():
+    raise FileNotFoundError(f"Directory {api_dir} does not exist")
+api_files = list(api_dir.glob('**/*.md'))  # This should return Path objects
 
-# Step 2: Define display name mappings for special cases
-display_names = {
-    "util": "Utils",  # Special case: util.md becomes "Utils"
+# Debug: Print all found files to verify
+print("Found files:", [str(file) for file in api_files])
+if not api_files:
+    print("No .md files found in api directory")
+
+# Step 2: Organize files into categories
+categories = {
+    "client": {"display": "Client", "items": []},
+    "game": {"display": "Game", "items": []},
+    "gui": {"display": "GUI", "items": []},
+    "imgui": {"display": "ImGui", "items": []},
+    "misc": {"display": "Misc", "items": []}
 }
+script_item = None
 
-# Generate the sidebar items
-items = []
 for file in api_files:
-    display_name = display_names.get(file, file.capitalize())  # Use mapping or capitalize first letter
-    link = file
-    items.append(f'{{ text: "{display_name[:-3].split("/")[-1]}", link: "{link}" }}')
+    # Ensure file is a Path object
+    if isinstance(file, str):
+        file = Path(file)
+    relative_path = file.relative_to(api_dir)
+    parts = relative_path.parts
+    print(f"Processing file: {relative_path}, parts: {parts}")  # Debug
+
+    if len(parts) == 1 and parts[0].lower() == "script.md":
+        # Handle script.md as a standalone item
+        script_item = f'{{ text: "script", link: "/api/script.md" }}'
+        print("Added script item")  # Debug
+    elif len(parts) == 2:
+        # Handle files in subdirectories (e.g., api/client/audio.md)
+        category, filename = parts
+        category = category.lower()  # Case-insensitive matching
+        print(f"Category: {category}, Filename: {filename}")  # Debug
+        if category in categories:
+            # Extract the stem (filename without .md) and capitalize for display
+            display_name = filename.capitalize()
+            # Special case for "util" to display as "Utils"
+            if filename == "util":
+                display_name = "Utils"
+            link = f"/api/{category}/{filename}"
+            categories[category]["items"].append(
+                f'{{ text: "{display_name}", link: "{link}" }}'
+            )
+            print(f"Added to {category}: {display_name} -> {link}")  # Debug
+        else:
+            print(f"Category {category} not found in categories")  # Debug
+
+# Step 3: Generate the nested sidebar items
+items = []
+# Add script as the first top-level item
+if script_item:
+    items.append(script_item)
+    print("Script item added to items")  # Debug
+
+# Add each category as a nested item
+for category, info in categories.items():
+    print(f"Processing category: {category}, items: {info['items']}")  # Debug
+    if info["items"]:  # Only include categories with items
+        nested_items = ",\n                        ".join(info["items"])
+        category_entry = (
+            f'{{ text: "{info["display"]}", collapsed: false, items: [\n'
+            f'                        {nested_items}\n'
+            f'                    ]}}'
+        )
+        items.append(category_entry)
+        print(f"Added category {info['display']} to items")  # Debug
+    else:
+        print(f"No items for category {category}")  # Debug
 
 # Format the items string with proper indentation
 items_str = ",\n                    ".join(items)
+print("Final items string:", items_str)  # Debug
 
-# Step 3: Read the current config.mts file
-with open('./.vitepress/config.mts', 'r') as f:
-    config_content = f.read()
+# Step 4: Read the template file
+with open('./.vitepress/config_template.mts', 'r') as f:
+    template_content = f.read()
 
-# Find and replace the API section's items array
-pattern = r'(\{\s*text:\s*"API",\s*items:\s*\[)(.*?)(\]\s*\},)'
-match = re.search(pattern, config_content, re.DOTALL)
-if match:
-    # Construct the new API section with updated items
-    new_section = f'{match.group(1)}\n                    {items_str}\n                {match.group(3)}'
-    # Replace the old section with the new one
-    updated_config = config_content[:match.start()] + new_section + config_content[match.end():]
-else:
-    raise Exception("Could not find the 'API' section in config.mts")
+# Step 5: Replace the placeholder {text:"replaceme"} with the generated items
+updated_content = template_content.replace(
+    '{text:"replaceme"}',
+    f'{{ text: "API", items: [\n                    {items_str}\n                ]}}'
+)
 
-# Write the updated content back to config.mts
+# Step 6: Write the updated content to config.mts
 with open('./.vitepress/config.mts', 'w') as f:
-    f.write(updated_config)
-
+    f.write(updated_content)
 print("Successfully updated ./.vitepress/config.mts with the current API documentation.")
