@@ -51,7 +51,6 @@ export default defineConfig({
                     { text: "events", link: "api/game/events.md" },
                     { text: "player", link: "api/game/player.md" },
                     { text: "constraints", link: "api/gui/constraints.md" },
-                    { text: "flarialgui", link: "api/gui/flarialgui.md" },
                     { text: "gui", link: "api/gui/gui.md" },
                     { text: "settings", link: "api/gui/settings.md" },
                     { text: "drawlist", link: "api/imgui/drawlist.md" },
