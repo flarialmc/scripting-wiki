@@ -1,5 +1,6 @@
 import re
 import os
+import json
 from pathlib import Path
 
 def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
@@ -48,7 +49,8 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
             current_doc["type"] = line[8:].strip()
         # Handle function definitions
         elif line.startswith("function"):
-            match = re.search(r"function\s+([a-zA-Z0-9_.]+)", line)
+            # Updated regex to capture both ClassName:MethodName and ClassName.MethodName
+            match = re.search(r"function\s+([a-zA-Z0-9_]+(?:[.:][a-zA-Z0-9_]+)?)", line)
             if match:
                 funcname = match.group(1)
                 markdown += f"\n-----\n\n## `{funcname}`\n"
@@ -121,19 +123,16 @@ if not api_dir.exists():
     raise FileNotFoundError(f"Directory {api_dir} does not exist")
 api_files = list(api_dir.glob('**/*.md'))  # This should return Path objects
 
-# Debug: Print all found files to verify
-print("Found files:", [str(file) for file in api_files])
-if not api_files:
-    print("No .md files found in api directory")
+# Load category translations from JSON file
+try:
+    with open('categories.json', 'r') as f:
+        category_translations = json.load(f)
+except (FileNotFoundError, json.JSONDecodeError):
+    category_translations = {}
 
 # Step 2: Organize files into categories
-categories = {
-    "client": {"display": "Client", "items": []},
-    "game": {"display": "Game", "items": []},
-    "gui": {"display": "GUI", "items": []},
-    "imgui": {"display": "ImGui", "items": []},
-    "misc": {"display": "Misc", "items": []}
-}
+# Dynamically build categories based on subdirectories
+categories = {}
 script_item = None
 
 for file in api_files:
@@ -142,41 +141,39 @@ for file in api_files:
         file = Path(file)
     relative_path = file.relative_to(api_dir)
     parts = relative_path.parts
-    print(f"Processing file: {relative_path}, parts: {parts}")  # Debug
 
     if len(parts) == 1 and parts[0].lower() == "script.md":
         # Handle script.md as a standalone item
         script_item = f'{{ text: "script", link: "/api/script.md" }}'
-        print("Added script item")  # Debug
     elif len(parts) == 2:
         # Handle files in subdirectories (e.g., api/client/audio.md)
         category, filename = parts
         category = category.lower()  # Case-insensitive matching
-        print(f"Category: {category}, Filename: {filename}")  # Debug
-        if category in categories:
-            # Trim .md and do not capitalize
-            display_name = filename.replace(".md", "")  # Trim .md
-            # Special case for "util" to display as "utils"
-            if display_name == "util":
-                display_name = "utils"
-            link = f"/api/{category}/{filename}"
-            categories[category]["items"].append(
-                f'{{ text: "{display_name}", link: "{link}" }}'
-            )
-            print(f"Added to {category}: {display_name} -> {link}")  # Debug
-        else:
-            print(f"Category {category} not found in categories")  # Debug
+
+        # Initialize category if not already present
+        if category not in categories:
+            # Use translation from JSON if available, otherwise capitalize first letter
+            display_name = category_translations.get(category, category[0].upper() + category[1:])
+            categories[category] = {"display": display_name, "items": []}
+
+        # Trim .md and do not capitalize
+        display_name = filename.replace(".md", "")  # Trim .md
+        # Special case for "util" to display as "utils"
+        if display_name == "util":
+            display_name = "utils"
+        link = f"/api/{category}/{filename}"
+        categories[category]["items"].append(
+            f'{{ text: "{display_name}", link: "{link}" }}'
+        )
 
 # Step 3: Generate the nested sidebar items
 items = []
 # Add script as the first top-level item
 if script_item:
     items.append(script_item)
-    print("Script item added to items")  # Debug
 
 # Add each category as a nested item
 for category, info in categories.items():
-    print(f"Processing category: {category}, items: {info['items']}")  # Debug
     if info["items"]:  # Only include categories with items
         nested_items = ",\n                        ".join(info["items"])
         category_entry = (
@@ -185,13 +182,9 @@ for category, info in categories.items():
             f'                    ]}}'
         )
         items.append(category_entry)
-        print(f"Added category {info['display']} to items")  # Debug
-    else:
-        print(f"No items for category {category}")  # Debug
 
 # Format the items string with proper indentation
 items_str = ",\n                    ".join(items)
-print("Final items string:", items_str)  # Debug
 
 # Step 4: Read the template file
 with open('./.vitepress/config_template.mts', 'r') as f:

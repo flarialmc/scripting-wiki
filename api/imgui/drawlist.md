@@ -9,7 +9,7 @@ ImDrawList = {}
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddLine`
 ```lua
 function ImDrawList:AddLine(p1, p2, color, thickness) end
 ```
@@ -25,7 +25,7 @@ Adds a line to the draw list.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddRect`
 ```lua
 function ImDrawList:AddRect(p1, p2, color, rounding, thickness, flags) end
 ```
@@ -41,7 +41,7 @@ Adds a rectangle outline.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddRectFilled`
 ```lua
 function ImDrawList:AddRectFilled(p1, p2, color, rounding, flags) end
 ```
@@ -56,7 +56,7 @@ Adds a filled rectangle.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddCircle`
 ```lua
 function ImDrawList:AddCircle(center, radius, color, numSegments, thickness) end
 ```
@@ -71,7 +71,7 @@ Adds a circle outline.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddCircleFilled`
 ```lua
 function ImDrawList:AddCircleFilled(center, radius, color, numSegments) end
 ```
@@ -85,7 +85,7 @@ Adds a filled circle.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddText`
 ```lua
 function ImDrawList:AddText(pos, color, font_size, text) end
 ```
@@ -99,7 +99,7 @@ Adds text to the draw list with a custom font size.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddTriangleFilled`
 ```lua
 function ImDrawList:AddTriangleFilled(p1, p2, p3, color) end
 ```
@@ -113,7 +113,7 @@ Adds a filled triangle.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddTriangle`
 ```lua
 function ImDrawList:AddTriangle(p1, p2, p3, color, thickness) end
 ```
@@ -128,7 +128,7 @@ Adds a triangle outline.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddQuadFilled`
 ```lua
 function ImDrawList:AddQuadFilled(p1, p2, p3, p4, color) end
 ```
@@ -143,7 +143,7 @@ Adds a filled quadrilateral.
 
 -----
 
-## `ImDrawList`
+## `ImDrawList:AddQuad`
 ```lua
 function ImDrawList:AddQuad(p1, p2, p3, p4, color, thickness) end
 ```

@@ -1,0 +1,7 @@
+{
+    "client": "Client",
+    "game": "Game",
+    "gui": "GUI",
+    "imgui": "ImGui",
+    "misc": "Misc"
+}
