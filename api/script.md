@@ -1,5 +1,3 @@
------
-
 ## `name`
 **Type:** string
 

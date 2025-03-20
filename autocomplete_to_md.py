@@ -93,20 +93,29 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
 
     return markdown.strip()
 
-
-# File processing remains unchanged
+# File processing: Generate .md files and trim excess ----- separators
 p = Path('./autocomplete')
 for f in p.glob('**/*.lua'):
     if not os.path.exists("api/" + f.parent.name):
         os.makedirs("api/" + f.parent.name)
         print(f"Created {f.parent} folder")
     path = str(f).replace("autocomplete", "api").replace(".lua", ".md")
+    # Generate markdown content
+    markdown_content = parse_lua_doc(f.read_text(), f)
+    # Trim excess ----- separators from start and end
+    markdown_content = markdown_content.strip()
+    while markdown_content.startswith("-----"):
+        markdown_content = markdown_content[5:].strip()
+    while markdown_content.endswith("-----"):
+        markdown_content = markdown_content[:-5].strip()
+    # Add reference link
+    markdown_content += f"\n\nReference: [{f.name}](https://github.com/flarialmc/scripting-wiki/tree/main/{f.as_posix().replace('%5c', '/')})"
+    # Write to file
     with open(path, 'w') as ff:
-        ff.write(parse_lua_doc(f"{f.read_text()}", f)+f"\n\nReference: [{f.name}](https://github.com/flarialmc/scripting-wiki/tree/main/{f.as_posix().replace('%5c', '/')})")
+        ff.write(markdown_content)
         print(f"Created {path}")
 
-
-
+# Sidebar tree generation
 api_dir = Path('./api')
 if not api_dir.exists():
     raise FileNotFoundError(f"Directory {api_dir} does not exist")
@@ -145,11 +154,11 @@ for file in api_files:
         category = category.lower()  # Case-insensitive matching
         print(f"Category: {category}, Filename: {filename}")  # Debug
         if category in categories:
-            # Extract the stem (filename without .md) and capitalize for display
-            display_name = filename.capitalize()
-            # Special case for "util" to display as "Utils"
-            if filename == "util":
-                display_name = "Utils"
+            # Trim .md and do not capitalize
+            display_name = filename.replace(".md", "")  # Trim .md
+            # Special case for "util" to display as "utils"
+            if display_name == "util":
+                display_name = "utils"
             link = f"/api/{category}/{filename}"
             categories[category]["items"].append(
                 f'{{ text: "{display_name}", link: "{link}" }}'

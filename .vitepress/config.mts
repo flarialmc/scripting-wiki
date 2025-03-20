@@ -45,29 +45,29 @@ export default defineConfig({
             { text: "API", items: [
                     { text: "script", link: "/api/script.md" },
                     { text: "Client", collapsed: false, items: [
-                        { text: "Audio.md", link: "/api/client/audio.md" },
-                        { text: "Client.md", link: "/api/client/client.md" },
-                        { text: "Network.md", link: "/api/client/network.md" }
+                        { text: "audio", link: "/api/client/audio.md" },
+                        { text: "client", link: "/api/client/client.md" },
+                        { text: "network", link: "/api/client/network.md" }
                     ]},
                     { text: "Game", collapsed: false, items: [
-                        { text: "Events.md", link: "/api/game/events.md" },
-                        { text: "Player.md", link: "/api/game/player.md" },
-                        { text: "Server.md", link: "/api/game/server.md" }
+                        { text: "events", link: "/api/game/events.md" },
+                        { text: "player", link: "/api/game/player.md" },
+                        { text: "server", link: "/api/game/server.md" }
                     ]},
                     { text: "GUI", collapsed: false, items: [
-                        { text: "Constraints.md", link: "/api/gui/constraints.md" },
-                        { text: "Gui.md", link: "/api/gui/gui.md" },
-                        { text: "Settings.md", link: "/api/gui/settings.md" }
+                        { text: "constraints", link: "/api/gui/constraints.md" },
+                        { text: "gui", link: "/api/gui/gui.md" },
+                        { text: "settings", link: "/api/gui/settings.md" }
                     ]},
                     { text: "ImGui", collapsed: false, items: [
-                        { text: "Drawlist.md", link: "/api/imgui/drawlist.md" },
-                        { text: "Imgui.md", link: "/api/imgui/imgui.md" }
+                        { text: "drawlist", link: "/api/imgui/drawlist.md" },
+                        { text: "imgui", link: "/api/imgui/imgui.md" }
                     ]},
                     { text: "Misc", collapsed: false, items: [
-                        { text: "Fs.md", link: "/api/misc/fs.md" },
-                        { text: "Globals.md", link: "/api/misc/globals.md" },
-                        { text: "Objects.md", link: "/api/misc/objects.md" },
-                        { text: "Util.md", link: "/api/misc/util.md" }
+                        { text: "fs", link: "/api/misc/fs.md" },
+                        { text: "globals", link: "/api/misc/globals.md" },
+                        { text: "objects", link: "/api/misc/objects.md" },
+                        { text: "utils", link: "/api/misc/util.md" }
                     ]}
                 ]}
         ]
