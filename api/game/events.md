@@ -19,9 +19,11 @@ The handler may cancel some events by returning true.
 
 Called whenever a key is pressed or released
 key: The key number, use util.keyToString to get the key string.
-down: True if the key is pressed.
+action: The action of the key press where:
+0 = Released
+1 = Pressed
 You can cancel this event by returning true.
-onEvent("KeyEvent", function(key, down)
+onEvent("KeyEvent", function(key, action)
 
 end)
 
@@ -78,7 +80,7 @@ onEvent("ChatSendEvent", function(message, name, type)
 end)
 
 #### Parameters
-- `eventName`: string: | '"KeyEvent", function(key, down)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type)\n\t\nend' | '"ChatSendEvent", function(message, name, type)\n\t\nend' The name of the event to listen to.
+- `eventName`: string: | '"KeyEvent", function(key, action)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type)\n\t\nend' | '"ChatSendEvent", function(message, name, type)\n\t\nend' The name of the event to listen to.
 - `handler`: function: The function that will handle the event.
 #### Returns
 - nil:

@@ -22,16 +22,18 @@ Prints a message to the console.
 
 ## `registerCommand`
 ```lua
-function registerCommand(name, description, callback) end
+function registerCommand(name, description_or_callback, callback) end
 ```
-Registers a command in module scripts.
-Do not call this function in the global scope, you
-can call it in onLoad() or in any other safe function.
+Registers a command for use in module scripts.
+Should be called in the global scope as either:
+registerCommand(name, callback) or registerCommand(name, description, callback)
+If the description is omitted, the script’s description will be used.
+Command names must be unique; registering the same name will overwrite the existing handler.
 
 #### Parameters
-- `name`: string: The name of the command, without spaces.
-- `description`: string: The description of the command.
-- `callback`: fun(args:: table) The function to execute when the command is called.
+- `name`: string: The command name (no spaces).
+- `description_or_callback`: string|function: Command description or the callback function.
+- `callback?`: function: The callback to run, required if a description is provided.
 #### Returns
 - nil:
 
