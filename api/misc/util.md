@@ -11,14 +11,12 @@ util = {}
 
 ## `util.keyToString`
 ```lua
-function util.keyToString(key, isCapital, isKeybind) end
+function util.keyToString(key) end
 ```
 Converts a key code to its string representation.
 
 #### Parameters
 - `key`: number: The key code.
-- `isCapital`: boolean: Whether the string should be capitalized.
-- `isKeybind`: boolean: Whether the key code is for a keybind.
 #### Returns
 - string: The key as a string.
 
