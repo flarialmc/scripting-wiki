@@ -132,7 +132,7 @@ event = {}
 ---  
 ---end)  
 
----@param eventName string | '"KeyEvent", function(key, action)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend'| '"ChatReceiveEvent", function(message, name, type)\n\t\nend' | '"ChatSendEvent", function(message, name, type)\n\t\nend' The name of the event to listen to.
+---@param eventName string | '"KeyEvent", function(key, action)\n\t\nend' | '"MouseEvent", function(button, action)\n\t\nend' | '"TickEvent", function()\n\t\nend' | '"RenderEvent", function()\n\t\nend' | '"SetupAndRenderEvent", function()\n\t\nend' | '"ChatReceiveEvent", function(message, name, type)\n\t\nend' | '"ChatSendEvent", function(message, name, type)\n\t\nend' | '"ChangeDimensionEvent", function()\n\t\nend' | '"LoginEvent", function()\n\t\nend' | '"DisconnectEvent", function()\n\t\nend' | '"ContainerOpenEvent", function()\n\t\nend' | '"ContainerCloseEvent", function()\n\t\nend' | '"SetTitleEvent", function(text, type)\n\t\nend' | '"RespawnEvent", function()\n\t\nend' | '"AttackEvent", function()\n\t\nend' | '"FOVEvent", function(fov)\n\t\nend' | '"PerspectiveEvent", function(perspective)\n\t\nend' The name of the event to listen to.
 ---@param handler function The function that will handle the event.
 ---@return nil
 function onEvent(eventName, handler) end
