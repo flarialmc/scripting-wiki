@@ -13,7 +13,7 @@ settings = {}
 ---@field value string The current text in the textbox.
 
 ---@class KeybindSetting
----@field value string The currently assigned keybind as a string.
+---@field value boolean Returns true if the keybind is held down.
 
 ---Adds a toggle setting to the ClickGUI.
 ---@param name string The setting name.
@@ -41,8 +41,8 @@ function settings.addSlider(name, desc, defValue, maxValue, minValue, zerosafe) 
 function settings.addTextBox(name, desc, defaultValue, limit) end
 
 ---Adds a keybind setting to the ClickGUI.
+---Due to how keybinds are handled in Flarial, default values do not work.
 ---@param name string The setting name.
 ---@param desc string The setting description.
----@param defaultKey string The default key.
 ---@return KeybindSetting The created setting object with a `value` field.
-function settings.addKeybind(name, desc, defaultKey) end
+function settings.addKeybind(name, desc) end

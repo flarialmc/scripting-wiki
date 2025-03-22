@@ -68,14 +68,14 @@ Adds a text box setting to the ClickGUI.
 
 ## `settings.addKeybind`
 ```lua
-function settings.addKeybind(name, desc, defaultKey) end
+function settings.addKeybind(name, desc) end
 ```
 Adds a keybind setting to the ClickGUI.
+Due to how keybinds are handled in Flarial, default values do not work.
 
 #### Parameters
 - `name`: string: The setting name.
 - `desc`: string: The setting description.
-- `defaultKey`: string: The default key.
 #### Returns
 - KeybindSetting: The created setting object with a `value` field.
 
