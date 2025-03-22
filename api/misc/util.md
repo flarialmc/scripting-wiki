@@ -13,8 +13,6 @@ Converts a key code to its string representation.
 #### Returns
 - string: The key as a string.
 
------
-
 ## `util.setClipboard`
 ```lua
 function util.setClipboard(text) end
@@ -25,8 +23,6 @@ Sets the clipboard content.
 - `text`: string: The text to set in the clipboard.
 #### Returns
 - nil: 
-
------
 
 ## `util.getClipboard`
 ```lua

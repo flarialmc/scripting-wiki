@@ -47,8 +47,6 @@ Example: debug = true
 debug = false
 ```
 
------
-
 ## `execute`
 ```lua
 function execute(args) end
@@ -64,8 +62,6 @@ Called when the command is executed.
 #### Returns
 - nil: 
 
------
-
 ## `onEnable`
 ```lua
 function onEnable() end
@@ -75,8 +71,6 @@ Called when the module script is enabled via the ClickGUI.
 #### Returns
 - nil: 
 
------
-
 ## `onDisable`
 ```lua
 function onDisable() end
@@ -85,8 +79,6 @@ Called when the module script is disabled via the ClickGUI.
 
 #### Returns
 - nil: 
-
------
 
 ## `onLoad`
 ```lua

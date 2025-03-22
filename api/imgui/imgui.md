@@ -14,8 +14,6 @@ Begins a new ImGui window.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.End`
 ```lua
 function ImGui.End() end
@@ -24,8 +22,6 @@ Ends the current ImGui window.
 
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.BeginChild`
 ```lua
@@ -41,8 +37,6 @@ Begins a child window.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.BeginChildID`
 ```lua
 function ImGui.BeginChildID(id, size, child_flags, window_flags) end
@@ -57,8 +51,6 @@ Begins a child window using an ID.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.BeginChildFrame`
 ```lua
 function ImGui.BeginChildFrame(id, size, flags) end
@@ -71,8 +63,6 @@ Begins a child frame.
 - `flags`: number|nil: ImGuiWindowFlags.
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.BeginCombo`
 ```lua
@@ -87,8 +77,6 @@ Begins a combo box.
 #### Returns
 - boolean: True if the combo box is open.
 
------
-
 ## `ImGui.BeginDragDropSource`
 ```lua
 function ImGui.BeginDragDropSource(flags) end
@@ -100,8 +88,6 @@ Begins a drag and drop source.
 #### Returns
 - boolean: True if the drag and drop source has begun.
 
------
-
 ## `ImGui.BeginDragDropTarget`
 ```lua
 function ImGui.BeginDragDropTarget() end
@@ -110,8 +96,6 @@ Begins a drag and drop target.
 
 #### Returns
 - boolean: True if a drag and drop target is available.
-
------
 
 ## `ImGui.BeginGroup`
 ```lua
@@ -122,8 +106,6 @@ Begins an ImGui group.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.BeginMainMenuBar`
 ```lua
 function ImGui.BeginMainMenuBar() end
@@ -132,8 +114,6 @@ Begins the main menu bar.
 
 #### Returns
 - boolean: True if the main menu bar is active.
-
------
 
 ## `ImGui.BeginMenu`
 ```lua
@@ -147,8 +127,6 @@ Begins a menu.
 #### Returns
 - boolean: True if the menu is open.
 
------
-
 ## `ImGui.BeginMainMenuBar`
 ```lua
 function ImGui.BeginMainMenuBar() end
@@ -157,8 +135,6 @@ Begins a main menu bar.
 
 #### Returns
 - boolean: True if the menu bar is open.
-
------
 
 ## `ImGui.BeginPopup`
 ```lua
@@ -172,8 +148,6 @@ Begins a popup window.
 #### Returns
 - boolean: True if the popup began.
 
------
-
 ## `ImGui.BeginPopupContextItem`
 ```lua
 function ImGui.BeginPopupContextItem(name, flags) end
@@ -185,8 +159,6 @@ Begins a context popup for an item.
 - `flags`: number|nil: ImGuiPopupFlags.
 #### Returns
 - boolean: True if the context popup began.
-
------
 
 ## `ImGui.BeginPopupContextVoid`
 ```lua
@@ -200,8 +172,6 @@ Begins a context popup for a void area.
 #### Returns
 - boolean: True if the context popup began.
 
------
-
 ## `ImGui.BeginTabBar`
 ```lua
 function ImGui.BeginTabBar(name, flags) end
@@ -213,8 +183,6 @@ Begins a tab bar.
 - `flags`: number|nil: ImGuiTabBarFlags.
 #### Returns
 - boolean: True if the tab bar began.
-
------
 
 ## `ImGui.BeginTable`
 ```lua
@@ -230,8 +198,6 @@ Begins a table.
 #### Returns
 - boolean: True if the table began.
 
------
-
 ## `ImGui.BeginTooltip`
 ```lua
 function ImGui.BeginTooltip() end
@@ -241,8 +207,6 @@ Begins a tooltip.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.Bullet`
 ```lua
 function ImGui.Bullet() end
@@ -251,8 +215,6 @@ Displays a bullet point.
 
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.BulletText`
 ```lua
@@ -264,8 +226,6 @@ Displays bullet text.
 - `text`: string: The text to display.
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.Button`
 ```lua
@@ -279,8 +239,6 @@ Creates a button.
 #### Returns
 - boolean: True if the button was pressed.
 
------
-
 ## `ImGui.CloseCurrentPopup`
 ```lua
 function ImGui.CloseCurrentPopup() end
@@ -289,8 +247,6 @@ Closes the current popup.
 
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.CollapsingHeader`
 ```lua
@@ -303,8 +259,6 @@ Creates a collapsing header.
 - `flags`: number|nil: ImGuiTreeNodeFlags.
 #### Returns
 - boolean: True if the header is open.
-
------
 
 ## `ImGui.ColorButton`
 ```lua
@@ -319,8 +273,6 @@ Creates a color button.
 #### Returns
 - boolean: True if the color button was pressed.
 
------
-
 ## `ImGui.Text`
 ```lua
 function ImGui.Text(text) end
@@ -331,8 +283,6 @@ Displays text.
 - `text`: string: The text to display.
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.InputText`
 ```lua
@@ -346,8 +296,6 @@ Creates an editable text input field.
 #### Returns
 - string: The updated text after user input.
 
------
-
 ## `ImGui.GetBackgroundDrawList`
 ```lua
 function ImGui.GetBackgroundDrawList() end
@@ -356,8 +304,6 @@ Gets the background draw list.
 
 #### Returns
 - ImDrawList: The background draw list.
-
------
 
 ## `ImGui.GetForegroundDrawList`
 ```lua
@@ -368,8 +314,6 @@ Gets the foreground draw list.
 #### Returns
 - ImDrawList: The foreground draw list.
 
------
-
 ## `ImGui.GetWindowDrawList`
 ```lua
 function ImGui.GetWindowDrawList() end
@@ -378,8 +322,6 @@ Gets the window draw list.
 
 #### Returns
 - ImDrawList: The window draw list.
-
------
 
 ## `ImGui.SameLine`
 ```lua
@@ -393,8 +335,6 @@ Continues drawing on the same line instead of moving to a new line.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.GetDrawData`
 ```lua
 function ImGui.GetDrawData() end
@@ -403,8 +343,6 @@ Gets the current draw data.
 
 #### Returns
 - any: The draw data.
-
------
 
 ## `ImGui.SetNextWindowSize`
 ```lua
@@ -418,8 +356,6 @@ Sets the next window size.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.SetNextWindowPos`
 ```lua
 function ImGui.SetNextWindowPos(pos, pivot) end
@@ -432,8 +368,6 @@ Sets the next window position.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.SetNextWindowBgAlpha`
 ```lua
 function ImGui.SetNextWindowBgAlpha(alpha) end
@@ -444,8 +378,6 @@ Sets the next window background alpha.
 - `alpha`: number: The background alpha value.
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.SetNextWindowCollapsed`
 ```lua
@@ -458,8 +390,6 @@ Sets whether the next window is collapsed.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.SetNextWindowFocus`
 ```lua
 function ImGui.SetNextWindowFocus() end
@@ -468,8 +398,6 @@ Sets focus to the next window.
 
 #### Returns
 - nil: 
-
------
 
 ## `ImGui.SetNextWindowContentSize`
 ```lua
@@ -482,8 +410,6 @@ Sets the next window content size.
 #### Returns
 - nil: 
 
------
-
 ## `ImGui.IsKeyDown`
 ```lua
 function ImGui.IsKeyDown(key) end
@@ -494,8 +420,6 @@ Checks if a key is down.
 - `key`: number: The key code.
 #### Returns
 - boolean: True if the key is down.
-
------
 
 ## `ImGui.IsKeyPressed`
 ```lua
@@ -509,8 +433,6 @@ Checks if a key is pressed.
 #### Returns
 - boolean: True if the key is pressed.
 
------
-
 ## `ImGui.IsKeyPressed`
 ```lua
 function ImGui.IsKeyPressed(key) end
@@ -521,8 +443,6 @@ Checks if a key is pressed.
 - `key`: number: The key code.
 #### Returns
 - boolean: True if the key is pressed.
-
------
 
 ## `ImGui.IsKeyReleased`
 ```lua
@@ -535,8 +455,6 @@ Checks if a key is released.
 #### Returns
 - boolean: True if the key is released.
 
------
-
 ## `ImGui.IsMouseDown`
 ```lua
 function ImGui.IsMouseDown(button) end
@@ -547,8 +465,6 @@ Checks if a mouse button is down.
 - `button`: number: The mouse button index.
 #### Returns
 - boolean: True if the mouse button is down.
-
------
 
 ## `ImGui.IsMouseClicked`
 ```lua
@@ -562,8 +478,6 @@ Checks if a mouse button is clicked.
 #### Returns
 - boolean: True if the mouse button was clicked.
 
------
-
 ## `ImGui.IsMouseClicked`
 ```lua
 function ImGui.IsMouseClicked(button) end
@@ -574,8 +488,6 @@ Checks if a mouse button is clicked.
 - `button`: number: The mouse button index.
 #### Returns
 - boolean: True if the mouse button was clicked.
-
------
 
 ## `ImGui.IsMouseReleased`
 ```lua
@@ -588,8 +500,6 @@ Checks if a mouse button is released.
 #### Returns
 - boolean: True if the mouse button was released.
 
------
-
 ## `ImGui.GetMousePos`
 ```lua
 function ImGui.GetMousePos() end
@@ -598,8 +508,6 @@ Returns the position of your mouse.
 
 #### Returns
 - Vector2: the position of your mouse.
-
------
 
 ## `ImGui.GetDisplaySize`
 ```lua
@@ -610,8 +518,6 @@ Returns the size of the Minecraft window.
 #### Returns
 - Vector2: the width and height of the window in pixels.
 
------
-
 ## `ImGui.GetFrameRate`
 ```lua
 function ImGui.GetFrameRate() end
@@ -620,8 +526,6 @@ Returns Minecraft's framerate in floating point numbers.
 
 #### Returns
 - number: the current framerate.
-
------
 
 ## `ImGui.GetDeltaTime`
 ```lua

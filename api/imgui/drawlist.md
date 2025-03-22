@@ -16,8 +16,6 @@ Adds a line to the draw list.
 #### Returns
 - nil: 
 
------
-
 ## `ImDrawList:AddRect`
 ```lua
 function ImDrawList:AddRect(p1, p2, color, rounding, thickness, flags) end
@@ -34,8 +32,6 @@ Adds a rectangle outline.
 #### Returns
 - nil: 
 
------
-
 ## `ImDrawList:AddRectFilled`
 ```lua
 function ImDrawList:AddRectFilled(p1, p2, color, rounding, flags) end
@@ -50,8 +46,6 @@ Adds a filled rectangle.
 - `flags`: ImDrawList|nil: The drawlist flags.
 #### Returns
 - nil: 
-
------
 
 ## `ImDrawList:AddCircle`
 ```lua
@@ -68,8 +62,6 @@ Adds a circle outline.
 #### Returns
 - nil: 
 
------
-
 ## `ImDrawList:AddCircleFilled`
 ```lua
 function ImDrawList:AddCircleFilled(center, radius, color, numSegments) end
@@ -83,8 +75,6 @@ Adds a filled circle.
 - `numSegments`: number|nil: Number of segments.
 #### Returns
 - nil: 
-
------
 
 ## `ImDrawList:AddText`
 ```lua
@@ -100,8 +90,6 @@ Adds text to the draw list with a custom font size.
 #### Returns
 - nil: 
 
------
-
 ## `ImDrawList:AddTriangleFilled`
 ```lua
 function ImDrawList:AddTriangleFilled(p1, p2, p3, color) end
@@ -115,8 +103,6 @@ Adds a filled triangle.
 - `color`: table: The fill color.
 #### Returns
 - nil: 
-
------
 
 ## `ImDrawList:AddTriangle`
 ```lua
@@ -133,8 +119,6 @@ Adds a triangle outline.
 #### Returns
 - nil: 
 
------
-
 ## `ImDrawList:AddQuadFilled`
 ```lua
 function ImDrawList:AddQuadFilled(p1, p2, p3, p4, color) end
@@ -149,8 +133,6 @@ Adds a filled quadrilateral.
 - `color`: table: The fill color.
 #### Returns
 - nil: 
-
------
 
 ## `ImDrawList:AddQuad`
 ```lua

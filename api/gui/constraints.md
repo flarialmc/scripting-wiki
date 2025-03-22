@@ -15,8 +15,6 @@ Computes a value based on a percentage of a specified edge’s dimension.
 #### Returns
 - number: The computed value.
 
------
-
 ## `Constraints.RelativeConstraint`
 ```lua
 function Constraints.RelativeConstraint(percent, dimension, ignore_stack) end
@@ -29,8 +27,6 @@ Computes a relative value based on a percentage of a given dimension.
 - `ignore_stack`: boolean|nil: Ignores any stacking effects.
 #### Returns
 - number: The computed relative value.
-
------
 
 ## `Constraints.CenterConstraint`
 ```lua
@@ -48,8 +44,6 @@ Calculates the center coordinates for a rectangle.
 #### Returns
 - Vector2: Returns a vector2 representing the center coordinates.
 
------
-
 ## `Constraints.RoundingConstraint`
 ```lua
 function Constraints.RoundingConstraint(radiusX, radiusY) end
@@ -61,8 +55,6 @@ Calculates rounding constraints based on given radii.
 - `radiusY`: number: The radius along the y-axis.
 #### Returns
 - Vector2: Returns a vector2 representing the rounding values.
-
------
 
 ## `Constraints.SpacingConstraint`
 ```lua
@@ -76,8 +68,6 @@ Calculates spacing based on a percentage and a dimension value.
 #### Returns
 - number: The computed spacing value.
 
------
-
 ## `Constraints.FontScalar`
 ```lua
 function Constraints.FontScalar(dimension) end
@@ -88,8 +78,6 @@ Calculates a font scaling factor based on a given dimension.
 - `dimension`: number: The dimension to base scaling on.
 #### Returns
 - number: The font scale factor.
-
------
 
 ## `Constraints.CalculatePercentage`
 ```lua

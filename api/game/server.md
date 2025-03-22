@@ -12,8 +12,6 @@ Returns "none" or "world" if you aren't connected to a server.
 #### Returns
 - string: The current server IP.
 
------
-
 ## `server.ping`
 ```lua
 function server.ping() end

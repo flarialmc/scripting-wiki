@@ -13,8 +13,6 @@ Checks if the specified path exists.
 #### Returns
 - boolean: True if the path exists.
 
------
-
 ## `fs.isDirectory`
 ```lua
 function fs.isDirectory(path) end
@@ -25,8 +23,6 @@ Checks if the specified path is a directory.
 - `path`: string: The file path relative to the Flarial folder.
 #### Returns
 - boolean: True if the path is a directory.
-
------
 
 ## `fs.create`
 ```lua
@@ -39,8 +35,6 @@ Creates a directory at the specified path.
 #### Returns
 - boolean: True if the directory was successfully created.
 
------
-
 ## `fs.remove`
 ```lua
 function fs.remove(path) end
@@ -51,8 +45,6 @@ Removes the file or directory at the specified path.
 - `path`: string: The file or directory path relative to the Flarial folder.
 #### Returns
 - boolean: True if removal was successful.
-
------
 
 ## `fs.readFile`
 ```lua
@@ -65,8 +57,6 @@ Reads the contents of a file at the specified path.
 #### Returns
 - string: The file’s content.
 
------
-
 ## `fs.writeFile`
 ```lua
 function fs.writeFile(path, content) end
@@ -78,8 +68,6 @@ Writes content to the file at the specified path.
 - `content`: string: The content to write.
 #### Returns
 - boolean: True if writing was successful.
-
------
 
 ## `fs.listDirectory`
 ```lua

@@ -13,8 +13,6 @@ Displays a notification on your screen.
 #### Returns
 - nil: 
 
------
-
 ## `client.crash`
 ```lua
 function client.crash() end
@@ -23,8 +21,6 @@ Crashes the game.
 
 #### Returns
 - nil: 
-
------
 
 ## `client.freeMouse`
 ```lua
@@ -35,8 +31,6 @@ Frees your mouse.
 #### Returns
 - nil: 
 
------
-
 ## `client.grabMouse`
 ```lua
 function client.grabMouse() end
@@ -45,8 +39,6 @@ Grabs your mouse.
 
 #### Returns
 - nil: 
-
------
 
 ## `client.getScreenName`
 ```lua

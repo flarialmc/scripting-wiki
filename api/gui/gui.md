@@ -18,8 +18,6 @@ Draws a clickable button.
 #### Returns
 - boolean: True if the button was pressed.
 
------
-
 ## `gui.text`
 ```lua
 function gui.text(pos, text, width, height, fontSize) end
@@ -32,8 +30,6 @@ Draws text on your screen.
 - `width`: number: The width of the text area.
 - `height`: number: The height of the text area.
 - `fontSize`: number|nil: The size of the font, default is 200.
-
------
 
 ## `gui.render`
 ```lua

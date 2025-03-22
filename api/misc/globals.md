@@ -11,8 +11,6 @@ Prints a message to the console.
 #### Returns
 - nil: 
 
------
-
 ## `registerCommand`
 ```lua
 function registerCommand(name, description_or_callback, callback) end

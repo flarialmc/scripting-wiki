@@ -31,8 +31,6 @@ Adds a toggle setting to the ClickGUI.
 #### Returns
 - BoolSetting: The created setting object with a `value` field.
 
------
-
 ## `settings.addSlider`
 ```lua
 function settings.addSlider(name, desc, defValue, maxValue, minValue, zerosafe) end
@@ -49,8 +47,6 @@ Adds a slider setting to the ClickGUI.
 #### Returns
 - SliderSetting: The created setting object with a `value` field.
 
------
-
 ## `settings.addTextBox`
 ```lua
 function settings.addTextBox(name, desc, defaultValue, limit) end
@@ -64,8 +60,6 @@ Adds a text box setting to the ClickGUI.
 - `limit`: number: The maximum number of characters allowed in the textbox.
 #### Returns
 - TextBoxSetting: The created setting object with a `value` field.
-
------
 
 ## `settings.addKeybind`
 ```lua
