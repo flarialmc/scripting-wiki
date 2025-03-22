@@ -1,13 +1,6 @@
 # `fs` class
 
------
 
-## `fs`
-```lua
-fs = {}
-```
-
------
 
 ## `fs.exists`
 ```lua
@@ -21,11 +14,6 @@ Checks if the specified path exists.
 - boolean: True if the path exists.
 
 -----
-
-## `fs.isDirectory`
-```lua
-function fs.isDirectory(path) end
-```
 Checks if the specified path is a directory.
 
 #### Parameters
@@ -34,11 +22,6 @@ Checks if the specified path is a directory.
 - boolean: True if the path is a directory.
 
 -----
-
-## `fs.create`
-```lua
-function fs.create(path) end
-```
 Creates a directory at the specified path.
 
 #### Parameters
@@ -47,11 +30,6 @@ Creates a directory at the specified path.
 - boolean: True if the directory was successfully created.
 
 -----
-
-## `fs.remove`
-```lua
-function fs.remove(path) end
-```
 Removes the file or directory at the specified path.
 
 #### Parameters
@@ -60,11 +38,6 @@ Removes the file or directory at the specified path.
 - boolean: True if removal was successful.
 
 -----
-
-## `fs.readFile`
-```lua
-function fs.readFile(path) end
-```
 Reads the contents of a file at the specified path.
 
 #### Parameters
@@ -73,11 +46,6 @@ Reads the contents of a file at the specified path.
 - string: The file’s content.
 
 -----
-
-## `fs.writeFile`
-```lua
-function fs.writeFile(path, content) end
-```
 Writes content to the file at the specified path.
 
 #### Parameters
@@ -87,11 +55,6 @@ Writes content to the file at the specified path.
 - boolean: True if writing was successful.
 
 -----
-
-## `fs.listDirectory`
-```lua
-function fs.listDirectory(path) end
-```
 Lists the contents of the directory at the specified path.
 
 #### Parameters

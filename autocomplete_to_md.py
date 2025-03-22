@@ -5,6 +5,7 @@ from pathlib import Path
 
 def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
     markdown = ""
+    last_was_class = False
     lines = lua_contents.split("\n")
     current_doc = {
         "description": "",
@@ -15,13 +16,22 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
 
     for line in lines:
         line = line.strip()
+
+        # Skip assignments like `x = {}`
+        if re.match(r"^[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*\{\}$", line):
+            continue
+
         # Handle class annotations
         if line.startswith("---@class"):
             class_name = line[9:].strip()
-            markdown += f"\n# `{class_name}` class\n"
+            markdown += f"\n# `{class_name}` class\n\n\n"
+            last_was_class = True
+
         # Accumulate description lines
         elif line.startswith("---") and not line.startswith("---@"):
-            current_doc["description"] += line[3:].strip() + "\n"
+            content = line[3:].rstrip()
+            current_doc["description"] += content + "\n"
+
         # Parse parameters
         elif line.startswith("---@param"):
             parts = line[9:].strip().split(" ", 1)
@@ -35,6 +45,7 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
                     "type": param_type,
                     "desc": param_desc
                 })
+
         # Parse return types
         elif line.startswith("---@return"):
             parts = line[10:].strip().split(" ", 1)
@@ -44,54 +55,61 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
                 "type": ret_type,
                 "desc": ret_desc
             })
+
         # Parse variable types
         elif line.startswith("---@type"):
             current_doc["type"] = line[8:].strip()
+
         # Handle function definitions
         elif line.startswith("function"):
-            # Updated regex to capture both ClassName:MethodName and ClassName.MethodName
             match = re.search(r"function\s+([a-zA-Z0-9_]+(?:[.:][a-zA-Z0-9_]+)?)", line)
             if match:
                 funcname = match.group(1)
-                markdown += f"\n-----\n\n## `{funcname}`\n"
-                markdown += f"```lua\n{line}\n```\n"
+                if not last_was_class:
+                    markdown += f"\n-----\n"
+                else:
+                    last_was_class = False
+                    
+                    markdown += f"\n## `{funcname}`\n"
+                    markdown += f"```lua\n{line}\n```\n"
+
                 if current_doc["description"]:
-                    markdown += current_doc["description"].strip() + "\n\n"
+                    # Format onEvent example blocks
+                    desc = current_doc["description"].strip()
+                    desc = re.sub(r'(onEvent\(\".*?\".*?end\))', r'```lua\n\1\n```', desc, flags=re.DOTALL)
+                    markdown += desc + "\n\n"
+
                 if current_doc["parameters"]:
                     markdown += "#### Parameters\n"
                     for param in current_doc["parameters"]:
                         markdown += f"- `{param['name']}`: {param['type']}: {param['desc']}\n"
+
                 if current_doc["returns"]:
                     markdown += "#### Returns\n"
                     for ret in current_doc["returns"]:
-                        ret_type = ret["type"]
-                        ret_desc = ret["desc"]
-                        markdown += f"- {ret_type}: {ret_desc}\n"
-                # Reset documentation accumulator
-                current_doc = {
-                    "description": "",
-                    "parameters": [],
-                    "returns": [],
-                    "type": None
-                }
+                        markdown += f"- {ret['type']}: {ret['desc']}\n"
+
+                current_doc = {"description": "", "parameters": [], "returns": [], "type": None}
+
         # Handle variable assignments
         elif re.match(r"^\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*.*", line):
             match = re.match(r"^\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*.*", line)
             if match:
                 varname = match.group(1)
-                markdown += f"\n-----\n\n## `{varname}`\n"
+                if not last_was_class:
+                    markdown += f"\n-----\n"
+                else:
+                    last_was_class = False  # Skip just once after class
+
+                markdown += f"\n## `{varname}`\n"
+                    
                 if current_doc["type"]:
                     markdown += f"**Type:** {current_doc['type']}\n\n"
                 if current_doc["description"]:
                     markdown += current_doc["description"].strip() + "\n\n"
+                            
                 markdown += f"```lua\n{line}\n```\n"
-                # Reset documentation accumulator
-                current_doc = {
-                    "description": "",
-                    "parameters": [],
-                    "returns": [],
-                    "type": None
-                }
+                current_doc = {"description": "", "parameters": [], "returns": [], "type": None}
 
     return markdown.strip()
 

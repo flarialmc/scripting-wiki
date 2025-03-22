@@ -48,25 +48,10 @@ debug = false
 ```
 
 -----
-
-## `aliases`
-**Type:** string[]
-
 A list of optional aliases for command scripts.
 Allows the command script to be executed using alternative names.
 Spaces are not allowed in aliases.
 Example: aliases = {"cmd", "command"}
-
-```lua
-aliases = {}
-```
-
------
-
-## `execute`
-```lua
-function execute(args) end
-```
 Called when the command is executed.
 
 #### Parameters
@@ -75,33 +60,18 @@ Called when the command is executed.
 - nil: 
 
 -----
-
-## `onEnable`
-```lua
-function onEnable() end
-```
 Called when the module script is enabled via the ClickGUI.
 
 #### Returns
 - nil: 
 
 -----
-
-## `onDisable`
-```lua
-function onDisable() end
-```
 Called when the module script is disabled via the ClickGUI.
 
 #### Returns
 - nil: 
 
 -----
-
-## `onLoad`
-```lua
-function onLoad() end
-```
 Called after a script is compiled and becomes a module or command.
 
 #### Returns

@@ -1,13 +1,6 @@
 # `audio` class
 
------
 
-## `audio`
-```lua
-audio = {}
-```
-
------
 
 ## `audio.play`
 ```lua

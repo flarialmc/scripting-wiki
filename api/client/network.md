@@ -1,13 +1,6 @@
 # `network` class
 
------
 
-## `network`
-```lua
-network = {}
-```
-
------
 
 ## `network.get`
 ```lua
@@ -21,11 +14,6 @@ Sends an HTTP GET request to the specified URL.
 - string: The response body from the server.
 
 -----
-
-## `network.post`
-```lua
-function network.post(url, data) end
-```
 Sends an HTTP POST request to the specified URL with the given data.
 
 #### Parameters

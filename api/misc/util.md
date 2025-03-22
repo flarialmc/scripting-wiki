@@ -1,13 +1,6 @@
 # `util` class
 
------
 
-## `util`
-```lua
-util = {}
-```
-
------
 
 ## `util.keyToString`
 ```lua
@@ -21,11 +14,6 @@ Converts a key code to its string representation.
 - string: The key as a string.
 
 -----
-
-## `util.setClipboard`
-```lua
-function util.setClipboard(text) end
-```
 Sets the clipboard content.
 
 #### Parameters
@@ -34,11 +22,6 @@ Sets the clipboard content.
 - nil: 
 
 -----
-
-## `util.getClipboard`
-```lua
-function util.getClipboard() end
-```
 Gets the current clipboard content.
 
 #### Returns

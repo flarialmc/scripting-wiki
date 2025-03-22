@@ -1,13 +1,6 @@
 # `server` class
 
------
 
-## `server`
-```lua
-server = {}
-```
-
------
 
 ## `server.ip`
 ```lua
@@ -20,11 +13,6 @@ Returns "none" or "world" if you aren't connected to a server.
 - string: The current server IP.
 
 -----
-
-## `server.ping`
-```lua
-function server.ping() end
-```
 Returns the ping of the server you are connected to.
 
 #### Returns

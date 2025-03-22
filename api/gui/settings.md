@@ -1,21 +1,22 @@
 # `settings` class
 
------
 
-## `settings`
-```lua
-settings = {}
-```
 
 # `BoolSetting` class
 
+
+
 # `SliderSetting` class
+
+
 
 # `TextBoxSetting` class
 
+
+
 # `KeybindSetting` class
 
------
+
 
 ## `settings.addToggle`
 ```lua
@@ -31,11 +32,6 @@ Adds a toggle setting to the ClickGUI.
 - BoolSetting: The created setting object with a `value` field.
 
 -----
-
-## `settings.addSlider`
-```lua
-function settings.addSlider(name, desc, defValue, maxValue, minValue, zerosafe) end
-```
 Adds a slider setting to the ClickGUI.
 
 #### Parameters
@@ -49,11 +45,6 @@ Adds a slider setting to the ClickGUI.
 - SliderSetting: The created setting object with a `value` field.
 
 -----
-
-## `settings.addTextBox`
-```lua
-function settings.addTextBox(name, desc, defaultValue, limit) end
-```
 Adds a text box setting to the ClickGUI.
 
 #### Parameters
@@ -65,11 +56,6 @@ Adds a text box setting to the ClickGUI.
 - TextBoxSetting: The created setting object with a `value` field.
 
 -----
-
-## `settings.addKeybind`
-```lua
-function settings.addKeybind(name, desc) end
-```
 Adds a keybind setting to the ClickGUI.
 Due to how keybinds are handled in Flarial, default values do not work.
 

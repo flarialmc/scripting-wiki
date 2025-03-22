@@ -33,21 +33,21 @@ function Constraints.CenterConstraint(width, height, axis, xModifier, yModifier,
 ---@return Vector2 Returns a vector2 representing the rounding values.  
 function Constraints.RoundingConstraint(radiusX, radiusY) end
 
----Calculates spacing based on a percentage and a dimension value.
----@param percentage number The percentage value.
----@param dimension number The dimension against which spacing is calculated.
----@return number The computed spacing value.
+---Calculates spacing based on a percentage and a dimension value.  
+---@param percentage number The percentage value.  
+---@param dimension number The dimension against which spacing is calculated.  
+---@return number The computed spacing value.  
 function Constraints.SpacingConstraint(percentage, dimension) end
 
----Calculates a font scaling factor based on a given dimension.
----@param dimension number The dimension to base scaling on.
----@return number The font scale factor.
+---Calculates a font scaling factor based on a given dimension.  
+---@param dimension number The dimension to base scaling on.  
+---@return number The font scale factor.  
 function Constraints.FontScalar(dimension) end
 
----Calculates adjusted percentage values for a given point.
----@param x number The x-coordinate.
----@param y number The y-coordinate.
----@param adjustWidth number|nil Width adjustment.
----@param adjustHeight number|nil Height adjustment.
----@return Vector2 Returns a vector2 representing the adjusted percentages.
+---Calculates adjusted percentage values for a given point.  
+---@param x number The x-coordinate.  
+---@param y number The y-coordinate.  
+---@param adjustWidth number|nil Width adjustment.  
+---@param adjustHeight number|nil Height adjustment.  
+---@return Vector2 Returns a vector2 representing the adjusted percentages.  
 function Constraints.CalculatePercentage(x, y, adjustWidth, adjustHeight) end

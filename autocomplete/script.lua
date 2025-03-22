@@ -1,7 +1,7 @@
 ---@meta
 
 ---The name of the module/command (required).  
----Spaces are not allowed in command names.
+---Spaces are not allowed in command names.  
 ---Example: name = "Flarial"  
 ---@type string
 name = ""
