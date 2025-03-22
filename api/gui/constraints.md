@@ -16,6 +16,11 @@ Computes a value based on a percentage of a specified edge’s dimension.
 - number: The computed value.
 
 -----
+
+## `Constraints.RelativeConstraint`
+```lua
+function Constraints.RelativeConstraint(percent, dimension, ignore_stack) end
+```
 Computes a relative value based on a percentage of a given dimension.
 
 #### Parameters
@@ -26,6 +31,11 @@ Computes a relative value based on a percentage of a given dimension.
 - number: The computed relative value.
 
 -----
+
+## `Constraints.CenterConstraint`
+```lua
+function Constraints.CenterConstraint(width, height, axis, xModifier, yModifier, ignore_stack) end
+```
 Calculates the center coordinates for a rectangle.
 
 #### Parameters
@@ -39,6 +49,11 @@ Calculates the center coordinates for a rectangle.
 - Vector2: Returns a vector2 representing the center coordinates.
 
 -----
+
+## `Constraints.RoundingConstraint`
+```lua
+function Constraints.RoundingConstraint(radiusX, radiusY) end
+```
 Calculates rounding constraints based on given radii.
 
 #### Parameters
@@ -48,6 +63,11 @@ Calculates rounding constraints based on given radii.
 - Vector2: Returns a vector2 representing the rounding values.
 
 -----
+
+## `Constraints.SpacingConstraint`
+```lua
+function Constraints.SpacingConstraint(percentage, dimension) end
+```
 Calculates spacing based on a percentage and a dimension value.
 
 #### Parameters
@@ -57,6 +77,11 @@ Calculates spacing based on a percentage and a dimension value.
 - number: The computed spacing value.
 
 -----
+
+## `Constraints.FontScalar`
+```lua
+function Constraints.FontScalar(dimension) end
+```
 Calculates a font scaling factor based on a given dimension.
 
 #### Parameters
@@ -65,6 +90,11 @@ Calculates a font scaling factor based on a given dimension.
 - number: The font scale factor.
 
 -----
+
+## `Constraints.CalculatePercentage`
+```lua
+function Constraints.CalculatePercentage(x, y, adjustWidth, adjustHeight) end
+```
 Calculates adjusted percentage values for a given point.
 
 #### Parameters

@@ -70,8 +70,8 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
                 else:
                     last_was_class = False
                     
-                    markdown += f"\n## `{funcname}`\n"
-                    markdown += f"```lua\n{line}\n```\n"
+                markdown += f"\n## `{funcname}`\n"
+                markdown += f"```lua\n{line}\n```\n"
 
                 if current_doc["description"]:
                     # Format onEvent example blocks

@@ -19,6 +19,11 @@ Draws a clickable button.
 - boolean: True if the button was pressed.
 
 -----
+
+## `gui.text`
+```lua
+function gui.text(pos, text, width, height, fontSize) end
+```
 Draws text on your screen.
 
 #### Parameters
@@ -29,6 +34,11 @@ Draws text on your screen.
 - `fontSize`: number|nil: The size of the font, default is 200.
 
 -----
+
+## `gui.render`
+```lua
+function gui.render(text, index) end
+```
 Draws a movable rectangle.
 
 #### Parameters

@@ -17,6 +17,11 @@ Adds a line to the draw list.
 - nil: 
 
 -----
+
+## `ImDrawList:AddRect`
+```lua
+function ImDrawList:AddRect(p1, p2, color, rounding, thickness, flags) end
+```
 Adds a rectangle outline.
 
 #### Parameters
@@ -30,6 +35,11 @@ Adds a rectangle outline.
 - nil: 
 
 -----
+
+## `ImDrawList:AddRectFilled`
+```lua
+function ImDrawList:AddRectFilled(p1, p2, color, rounding, flags) end
+```
 Adds a filled rectangle.
 
 #### Parameters
@@ -42,6 +52,11 @@ Adds a filled rectangle.
 - nil: 
 
 -----
+
+## `ImDrawList:AddCircle`
+```lua
+function ImDrawList:AddCircle(center, radius, color, numSegments, thickness) end
+```
 Adds a circle outline.
 
 #### Parameters
@@ -54,6 +69,11 @@ Adds a circle outline.
 - nil: 
 
 -----
+
+## `ImDrawList:AddCircleFilled`
+```lua
+function ImDrawList:AddCircleFilled(center, radius, color, numSegments) end
+```
 Adds a filled circle.
 
 #### Parameters
@@ -65,6 +85,11 @@ Adds a filled circle.
 - nil: 
 
 -----
+
+## `ImDrawList:AddText`
+```lua
+function ImDrawList:AddText(pos, color, font_size, text) end
+```
 Adds text to the draw list with a custom font size.
 
 #### Parameters
@@ -76,6 +101,11 @@ Adds text to the draw list with a custom font size.
 - nil: 
 
 -----
+
+## `ImDrawList:AddTriangleFilled`
+```lua
+function ImDrawList:AddTriangleFilled(p1, p2, p3, color) end
+```
 Adds a filled triangle.
 
 #### Parameters
@@ -87,6 +117,11 @@ Adds a filled triangle.
 - nil: 
 
 -----
+
+## `ImDrawList:AddTriangle`
+```lua
+function ImDrawList:AddTriangle(p1, p2, p3, color, thickness) end
+```
 Adds a triangle outline.
 
 #### Parameters
@@ -99,6 +134,11 @@ Adds a triangle outline.
 - nil: 
 
 -----
+
+## `ImDrawList:AddQuadFilled`
+```lua
+function ImDrawList:AddQuadFilled(p1, p2, p3, p4, color) end
+```
 Adds a filled quadrilateral.
 
 #### Parameters
@@ -111,6 +151,11 @@ Adds a filled quadrilateral.
 - nil: 
 
 -----
+
+## `ImDrawList:AddQuad`
+```lua
+function ImDrawList:AddQuad(p1, p2, p3, p4, color, thickness) end
+```
 Adds a quadrilateral outline.
 
 #### Parameters

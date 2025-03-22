@@ -12,6 +12,11 @@ Prints a message to the console.
 - nil: 
 
 -----
+
+## `registerCommand`
+```lua
+function registerCommand(name, description_or_callback, callback) end
+```
 Registers a command for use in module scripts.  
 Should be called in the global scope as either:  
 registerCommand(name, callback) or registerCommand(name, description, callback)  
