@@ -1,8 +1,8 @@
 ## `name`
 **Type:** string
 
-The name of the module/command (required).
-Spaces are not allowed in command names.
+The name of the module/command (required).  
+Spaces are not allowed in command names.  
 Example: name = "Flarial"
 
 ```lua
@@ -14,7 +14,7 @@ name = ""
 ## `description`
 **Type:** string
 
-The description of the module/command (required).
+The description of the module/command (required).  
 Example: description = "Flarial Description"
 
 ```lua
@@ -26,8 +26,8 @@ description = ""
 ## `author`
 **Type:** string
 
-The name of the module/command's author (optional).
-Used to display credits for the script creator.
+The name of the module/command's author (optional).  
+Used to display credits for the script creator.  
 Example: author = "skinStandardCust"
 
 ```lua
@@ -39,8 +39,8 @@ author = ""
 ## `debug`
 **Type:** boolean
 
-Enables or disables debug mode (optional).
-When true, error messages will include full stack tracebacks.
+Enables or disables debug mode (optional).  
+When true, error messages will include full stack tracebacks.  
 Example: debug = true
 
 ```lua
@@ -48,10 +48,10 @@ debug = false
 ```
 
 -----
-A list of optional aliases for command scripts.
-Allows the command script to be executed using alternative names.
-Spaces are not allowed in aliases.
-Example: aliases = {"cmd", "command"}
+A list of optional aliases for command scripts.  
+Allows the command script to be executed using alternative names.  
+Spaces are not allowed in aliases.  
+Example: aliases = {"cmd", "command"}  
 Called when the command is executed.
 
 #### Parameters

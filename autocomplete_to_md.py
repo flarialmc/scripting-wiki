@@ -30,7 +30,7 @@ def parse_lua_doc(lua_contents: str, lua_file: Path) -> str:
         # Accumulate description lines
         elif line.startswith("---") and not line.startswith("---@"):
             content = line[3:].rstrip()
-            current_doc["description"] += content + "\n"
+            current_doc["description"] += content + "  \n"
 
         # Parse parameters
         elif line.startswith("---@param"):

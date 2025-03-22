@@ -56,7 +56,7 @@ Adds a text box setting to the ClickGUI.
 - TextBoxSetting: The created setting object with a `value` field.
 
 -----
-Adds a keybind setting to the ClickGUI.
+Adds a keybind setting to the ClickGUI.  
 Due to how keybinds are handled in Flarial, default values do not work.
 
 #### Parameters

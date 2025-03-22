@@ -6,149 +6,149 @@
 ```lua
 function onEvent(eventName, handler) end
 ```
-Registers an event handler for a specified event.
-You can bind a function to one of several built-in events.
-The handler may cancel some events by returning true.
-Called whenever a key is pressed or released
-key: The key number, use util.keyToString to get the key string.
-action: The action of the key press where:
-0 = Released
-1 = Pressed
-You can cancel this event by returning true.
+Registers an event handler for a specified event.  
+You can bind a function to one of several built-in events.  
+The handler may cancel some events by returning true.  
+Called whenever a key is pressed or released  
+key: The key number, use util.keyToString to get the key string.  
+action: The action of the key press where:  
+0 = Released  
+1 = Pressed  
+You can cancel this event by returning true.  
 ```lua
-onEvent("KeyEvent", function(key, action)
-
+onEvent("KeyEvent", function(key, action)  
+  
 end)
-```
-Called whenever the mouse moves or is clicked.
-button: The button where:
-1 = Left Click
-2 = Right Click
-3 = Middle Click
-4 = Mouse Scroll
-action: The action of the button where:
-1 = Down
-2 = Release
-3 = Scroll Up
-4 = Scroll Down
-You can cancel this event by returning true.
+```  
+Called whenever the mouse moves or is clicked.  
+button: The button where:  
+1 = Left Click  
+2 = Right Click  
+3 = Middle Click  
+4 = Mouse Scroll  
+action: The action of the button where:  
+1 = Down  
+2 = Release  
+3 = Scroll Up  
+4 = Scroll Down  
+You can cancel this event by returning true.  
 ```lua
-onEvent("MouseEvent", function(button, action)
-
+onEvent("MouseEvent", function(button, action)  
+  
 end)
-```
-Called every game tick when the client is in a world/server.
+```  
+Called every game tick when the client is in a world/server.  
 ```lua
-onEvent("TickEvent", function()
-
+onEvent("TickEvent", function()  
+  
 end)
-```
-Render ImGui and FlarialGUI in this event.
-Accessing player functions is NOT safe in this event.
+```  
+Render ImGui and FlarialGUI in this event.  
+Accessing player functions is NOT safe in this event.  
 ```lua
-onEvent("RenderEvent", function()
-
+onEvent("RenderEvent", function()  
+  
 end)
-```
-Use this event if you need a faster loop than TickEvent.
-Rendering ImGui or FlarialGUI is NOT safe in this event.
-Accessing player functions is safe in this event.
+```  
+Use this event if you need a faster loop than TickEvent.  
+Rendering ImGui or FlarialGUI is NOT safe in this event.  
+Accessing player functions is safe in this event.  
 ```lua
-onEvent("SetupAndRenderEvent", function()
-
+onEvent("SetupAndRenderEvent", function()  
+  
 end)
-```
-Called whenever the client receives a chat message.
-message: The chat message.
-name: The name of the sender.
-type: The type of chat message, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_text
-You can cancel this event by returning true.
+```  
+Called whenever the client receives a chat message.  
+message: The chat message.  
+name: The name of the sender.  
+type: The type of chat message, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_text  
+You can cancel this event by returning true.  
 ```lua
-onEvent("ChatReceiveEvent", function(message, name, type)
-
+onEvent("ChatReceiveEvent", function(message, name, type)  
+  
 end)
-```
-Called whenever the player sends a message.
-message: The chat message.
-name: The name of the sender.
-type: The type of chat message, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_text
-You can cancel this event by returning true.
+```  
+Called whenever the player sends a message.  
+message: The chat message.  
+name: The name of the sender.  
+type: The type of chat message, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_text  
+You can cancel this event by returning true.  
 ```lua
-onEvent("ChatSendEvent", function(message, name, type)
-
+onEvent("ChatSendEvent", function(message, name, type)  
+  
 end)
-```
-Called when the player changes dimension.
-You can cancel this event by returning true.
+```  
+Called when the player changes dimension.  
+You can cancel this event by returning true.  
 ```lua
-onEvent("ChangeDimensionEvent", function()
-
+onEvent("ChangeDimensionEvent", function()  
+  
 end)
-```
-Called when the player logs into the world.
-You can cancel this event by returning true.
+```  
+Called when the player logs into the world.  
+You can cancel this event by returning true.  
 ```lua
-onEvent("LoginEvent", function()
-
+onEvent("LoginEvent", function()  
+  
 end)
-```
-Called when the client disconnects from the server.
-You can cancel this event by returning true.
+```  
+Called when the client disconnects from the server.  
+You can cancel this event by returning true.  
 ```lua
-onEvent("DisconnectEvent", function()
-
+onEvent("DisconnectEvent", function()  
+  
 end)
-```
-Called when a container (e.g. chest) is opened.
-You can cancel this event by returning true.
+```  
+Called when a container (e.g. chest) is opened.  
+You can cancel this event by returning true.  
 ```lua
-onEvent("ContainerOpenEvent", function()
-
+onEvent("ContainerOpenEvent", function()  
+  
 end)
-```
-Called when a container (e.g. chest) is closed.
-You can cancel this event by returning true.
+```  
+Called when a container (e.g. chest) is closed.  
+You can cancel this event by returning true.  
 ```lua
-onEvent("ContainerCloseEvent", function()
-
+onEvent("ContainerCloseEvent", function()  
+  
 end)
-```
-Called when a title or subtitle is set on screen.
-text: The content of the title.
-type: The type of title, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_set_title
-You can cancel this event by returning true.
+```  
+Called when a title or subtitle is set on screen.  
+text: The content of the title.  
+type: The type of title, refer to https://prismarinejs.github.io/minecraft-data/?v=bedrock_1.21.60&d=protocol#packet_set_title  
+You can cancel this event by returning true.  
 ```lua
-onEvent("SetTitleEvent", function(text, type)
-
+onEvent("SetTitleEvent", function(text, type)  
+  
 end)
-```
-Called when the player respawns.
-You can cancel this event by returning true.
+```  
+Called when the player respawns.  
+You can cancel this event by returning true.  
 ```lua
-onEvent("RespawnEvent", function()
-
+onEvent("RespawnEvent", function()  
+  
 end)
-```
-Called whenever the player attacks an entity or player.
+```  
+Called whenever the player attacks an entity or player.  
 ```lua
-onEvent("AttackEvent", function()
-
+onEvent("AttackEvent", function()  
+  
 end)
-```
-fov: Your current field of view.
+```  
+fov: Your current field of view.  
 ```lua
-onEvent("FOVEvent", function(fov)
-
+onEvent("FOVEvent", function(fov)  
+  
 end)
-```
-Called when the camera perspective changes.
-perspective: The new perspective where:
-0 = First Person
-1 = Third Person Back
-2 = Third Person Front
+```  
+Called when the camera perspective changes.  
+perspective: The new perspective where:  
+0 = First Person  
+1 = Third Person Back  
+2 = Third Person Front  
 ```lua
-onEvent("PerspectiveEvent", function(perspective)
-
+onEvent("PerspectiveEvent", function(perspective)  
+  
 end)
 ```
 

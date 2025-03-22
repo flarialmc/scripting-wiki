@@ -6,7 +6,7 @@
 ```lua
 function ImGui.Begin(name) end
 ```
-We recommend you refer to ImGuis docs regarding flags.
+We recommend you refer to ImGuis docs regarding flags.  
 Begins a new ImGui window.
 
 #### Parameters

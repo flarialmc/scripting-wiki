@@ -6,7 +6,7 @@
 ```lua
 function player.position() end
 ```
-Returns the player's position in floating point coordinates.
+Returns the player's position in floating point coordinates.  
 Returns 0.0f if the position isn't available.
 
 #### Returns
@@ -15,14 +15,14 @@ Returns 0.0f if the position isn't available.
 - number: z The z coordinate.
 
 -----
-Returns the player's name.
+Returns the player's name.  
 Returns an empty string if the name isn't available.
 
 #### Returns
 - string: The player's name.
 
 -----
-Returns true if the player is on the ground.
+Returns true if the player is on the ground.  
 Returns false if the player isn't available.
 
 #### Returns
@@ -43,7 +43,7 @@ Executes a server command.
 - `command`: string: The command without '/'
 
 -----
-Returns the player's rotation.
+Returns the player's rotation.  
 Returns (0.0f, 0.0f) if the player isn't available.
 
 #### Returns

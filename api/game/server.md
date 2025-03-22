@@ -6,7 +6,7 @@
 ```lua
 function server.ip() end
 ```
-Returns the IP of the server you connected to.
+Returns the IP of the server you connected to.  
 Returns "none" or "world" if you aren't connected to a server.
 
 #### Returns

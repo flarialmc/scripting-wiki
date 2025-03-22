@@ -12,10 +12,10 @@ Prints a message to the console.
 - nil: 
 
 -----
-Registers a command for use in module scripts.
-Should be called in the global scope as either:
-registerCommand(name, callback) or registerCommand(name, description, callback)
-If the description is omitted, the script’s description will be used.
+Registers a command for use in module scripts.  
+Should be called in the global scope as either:  
+registerCommand(name, callback) or registerCommand(name, description, callback)  
+If the description is omitted, the script’s description will be used.  
 Command names must be unique; registering the same name will overwrite the existing handler.
 
 #### Parameters
