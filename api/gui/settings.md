@@ -18,6 +18,22 @@
 
 
 
+## `settings.addHeader`
+```lua
+function settings.addHeader(name) end
+```
+Adds a new Header to the ClickGUI.
+
+#### Parameters
+- `text`: string: The header text.
+
+## `settings.extraPadding`
+```lua
+function settings.extraPadding() end
+```
+Adds extra padding to the ClickGUI.
+
+
 ## `settings.addToggle`
 ```lua
 function settings.addToggle(name, desc, defValue) end
