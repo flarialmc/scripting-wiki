@@ -15,6 +15,13 @@ settings = {}
 ---@class KeybindSetting
 ---@field value boolean Returns true if the keybind is held down.
 
+---Adds a new Header to the ClickGUI.
+---@param text string The header text.
+function settings.addHeader(name) end
+
+---Adds extra padding to the ClickGUI.
+function settings.extraPadding() end
+
 ---Adds a toggle setting to the ClickGUI.  
 ---@param name string The setting name.  
 ---@param desc string The setting description.  
