@@ -17,7 +17,12 @@ function player.name() end
 
 ---Returns the player's health.  
 ---Returns -1.0f if health isn't available.  
----@return number health The player's name.  
+---@return number health The player's health.  
+function player.name() end
+
+---Returns the player's hunger.  
+---Returns -1.0f if hunger isn't available.  
+---@return number hunger The player's hunger.  
 function player.name() end
 
 ---Returns true if the player is on the ground.  

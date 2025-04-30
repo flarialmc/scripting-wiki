@@ -32,7 +32,18 @@ Returns the player's health as a floating point.
 Returns -1.0f if health isn't available.
 
 #### Returns
-- string: The player's name.
+- float: The player's health.
+
+## `player.hunger`
+```lua
+function player.hunger() end
+```
+Returns the player's hunger as a floating point.  
+Returns -1.0f if hunger isn't available.
+
+#### Returns
+- float: The player's hunger.
+
 
 ## `player.grounded`
 ```lua
