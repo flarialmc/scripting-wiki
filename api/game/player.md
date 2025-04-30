@@ -44,6 +44,17 @@ Returns -1.0f if hunger isn't available.
 #### Returns
 - float: The player's hunger.
 
+## `player.armor`
+```lua
+function player.armor() end
+```
+Returns a table of armor piece objects.
+If armor is unavailable or armor piece doesn't exist, all parameters are -1 (except name, which is "empty").
+{ helmet = { name = string, maxDurability = int, damage = int, isEnchanted = bool }, chestplate = {...}, leggings = {...}, boots = {...} }
+
+#### Returns
+- table
+
 
 ## `player.grounded`
 ```lua

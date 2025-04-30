@@ -25,6 +25,12 @@ function player.name() end
 ---@return number hunger The player's hunger.  
 function player.name() end
 
+---Returns a table of armor piece objects.
+---If armor is unavailable or armor piece doesn't exist, all parameters are -1 (except name, which is "empty").
+---{ helmet = { name = string, maxDurability = int, damage = int, isEnchanted = bool }, chestplate = {...}, leggings = {...}, boots = {...} }
+---@return table The table of armor piece objects.
+function player.armor() end
+
 ---Returns true if the player is on the ground.  
 ---Returns false if the player isn't available.  
 ---@return boolean True if the player is on the ground.  
