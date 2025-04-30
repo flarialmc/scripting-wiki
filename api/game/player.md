@@ -24,6 +24,16 @@ Returns an empty string if the name isn't available.
 #### Returns
 - string: The player's name.
 
+## `player.health`
+```lua
+function player.health() end
+```
+Returns the player's health as a floating point.  
+Returns -1.0f if health isn't available.
+
+#### Returns
+- string: The player's name.
+
 ## `player.grounded`
 ```lua
 function player.grounded() end

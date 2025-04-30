@@ -15,6 +15,11 @@ function player.position() end
 ---@return string The player's name.  
 function player.name() end
 
+---Returns the player's health.  
+---Returns -1.0f if health isn't available.  
+---@return number health The player's name.  
+function player.name() end
+
 ---Returns true if the player is on the ground.  
 ---Returns false if the player isn't available.  
 ---@return boolean True if the player is on the ground.  
