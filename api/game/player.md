@@ -55,6 +55,16 @@ If armor is unavailable or armor piece doesn't exist, all parameters are -1 (exc
 #### Returns
 - table
 
+## `player.offhand`
+```lua
+function player.offhand() end
+```
+Returns a table containing offhand item data.
+If offhand item is unavailable or offhand item piece doesn't exist, all parameters are -1 (except name, which is "empty").
+{ name = string, maxDurability = int, damage = int, isEnchanted = bool }
+
+#### Returns
+- table
 
 ## `player.grounded`
 ```lua

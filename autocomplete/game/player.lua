@@ -31,6 +31,12 @@ function player.name() end
 ---@return table The table of armor piece objects.
 function player.armor() end
 
+---Returns a table containing offhand item data.
+---If offhand item is unavailable or offhand item piece doesn't exist, all parameters are -1 (except name, which is "empty").
+---{ name = string, maxDurability = int, damage = int, isEnchanted = bool }
+--- @return table The table of offhand item data.
+function player.offhand() end
+
 ---Returns true if the player is on the ground.  
 ---Returns false if the player isn't available.  
 ---@return boolean True if the player is on the ground.  
