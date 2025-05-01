@@ -37,6 +37,11 @@ function player.armor() end
 ---@return table The table of offhand item data.
 function player.offhand() end
 
+---Returns the player's dimension.
+---Returns unknown if the dimension isn't available.
+---@return string The player's dimension.
+function player.dimension() end
+
 ---Returns true if the player is on the ground.  
 ---Returns false if the player isn't available.  
 ---@return boolean True if the player is on the ground.  

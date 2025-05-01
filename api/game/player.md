@@ -66,6 +66,16 @@ If offhand item is unavailable or offhand item piece doesn't exist, all paramete
 #### Returns
 - table: The table of offhand item data.
 
+## `player.dimension`
+```lua
+function player.dimension() end
+```
+Returns the player's dimension.  
+Returns unknown if the dimension isn't available.
+
+#### Returns
+- string: The player's dimension.
+
 ## `player.grounded`
 ```lua
 function player.grounded() end
