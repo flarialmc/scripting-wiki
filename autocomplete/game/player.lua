@@ -18,12 +18,12 @@ function player.name() end
 ---Returns the player's health.  
 ---Returns -1.0f if health isn't available.  
 ---@return number health The player's health.  
-function player.name() end
+function player.health() end
 
 ---Returns the player's hunger.  
 ---Returns -1.0f if hunger isn't available.  
 ---@return number hunger The player's hunger.  
-function player.name() end
+function player.hunger() end
 
 ---Returns a table of armor piece objects.
 ---If armor is unavailable or armor piece doesn't exist, all parameters are -1 (except name, which is "empty").
@@ -34,7 +34,7 @@ function player.armor() end
 ---Returns a table containing offhand item data.
 ---If offhand item is unavailable or offhand item piece doesn't exist, all parameters are -1 (except name, which is "empty").
 ---{ name = string, maxDurability = int, damage = int, isEnchanted = bool }
---- @return table The table of offhand item data.
+---@return table The table of offhand item data.
 function player.offhand() end
 
 ---Returns true if the player is on the ground.  
