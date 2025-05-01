@@ -28,43 +28,53 @@ Returns an empty string if the name isn't available.
 ```lua
 function player.health() end
 ```
-Returns the player's health as a floating point.  
+Returns the player's health.  
 Returns -1.0f if health isn't available.
 
 #### Returns
-- float: The player's health.
+- number: health The player's health.
 
 ## `player.hunger`
 ```lua
 function player.hunger() end
 ```
-Returns the player's hunger as a floating point.  
+Returns the player's hunger.  
 Returns -1.0f if hunger isn't available.
 
 #### Returns
-- float: The player's hunger.
+- number: hunger The player's hunger.
 
 ## `player.armor`
 ```lua
 function player.armor() end
 ```
-Returns a table of armor piece objects.
-If armor is unavailable or armor piece doesn't exist, all parameters are -1 (except name, which is "empty").
+Returns a table of armor piece objects.  
+If armor is unavailable or armor piece doesn't exist, all parameters are -1 (except name, which is "empty").  
 { helmet = { name = string, maxDurability = int, damage = int, isEnchanted = bool }, chestplate = {...}, leggings = {...}, boots = {...} }
 
 #### Returns
-- table
+- table: The table of armor piece objects.
 
 ## `player.offhand`
 ```lua
 function player.offhand() end
 ```
-Returns a table containing offhand item data.
-If offhand item is unavailable or offhand item piece doesn't exist, all parameters are -1 (except name, which is "empty").
+Returns a table containing offhand item data.  
+If offhand item is unavailable or offhand item piece doesn't exist, all parameters are -1 (except name, which is "empty").  
 { name = string, maxDurability = int, damage = int, isEnchanted = bool }
 
 #### Returns
-- table
+- table: The table of offhand item data.
+
+## `player.dimension`
+```lua
+function player.dimension() end
+```
+Returns the player's dimension.  
+Returns unknown if the dimension isn't available.
+
+#### Returns
+- string: The player's dimension.
 
 ## `player.grounded`
 ```lua

@@ -12,6 +12,16 @@ Returns "none" or "world" if you aren't connected to a server.
 #### Returns
 - string: The current server IP.
 
+## `server.port`
+```lua
+function server.port() end
+```
+Returns the Port of the server you connected to.  
+Returns 0 if you aren't connected to a server.
+
+#### Returns
+- string: The current server Port.
+
 ## `server.ping`
 ```lua
 function server.ping() end
