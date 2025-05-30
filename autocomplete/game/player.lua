@@ -37,6 +37,12 @@ function player.armor() end
 ---@return table The table of offhand item data.
 function player.offhand() end
 
+---Returns a table containing mainhand item data.
+---If mainhand item is unavailable or mainhand item piece doesn't exist, all parameters are -1 (except name, which is "empty").
+---{ name = string, maxDurability = int, damage = int, isEnchanted = bool }
+---@return table The table of mainhand item data.
+function player.mainhand() end
+
 ---Returns the player's dimension.
 ---Returns unknown if the dimension isn't available.
 ---@return string The player's dimension.
