@@ -49,4 +49,15 @@ Returns the current screen name.
 #### Returns
 - string: The screen name.
 
+## `client.displayLocalMessage`
+```lua
+function client.displayLocalMessage(message) end
+```
+Prints a message to chat (only you can see it)
+
+#### Parameters
+- `message`: string: The message.
+#### Returns
+- nil:
+
 Reference: [client.lua](https://github.com/flarialmc/scripting-wiki/tree/main/autocomplete/client/client.lua)
