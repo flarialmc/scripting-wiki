@@ -23,3 +23,8 @@ function client.grabMouse() end
 ---Returns the current screen name.  
 ---@return string The screen name.  
 function client.getScreenName() end
+
+---Prints a message to chat (only you can see it)
+---@param message string The message.
+---@return nil
+function client.displayLocalMessage(message) end
