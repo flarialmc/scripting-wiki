@@ -11,34 +11,18 @@ Displays a notification on your screen.
 #### Parameters
 - `message`: string: The notification message.
 #### Returns
-- nil: 
+- nil:
 
-## `client.crash`
+## `client.displayLocalMessage`
 ```lua
-function client.crash() end
+function client.displayLocalMessage(message) end
 ```
-Crashes the game.
+Prints a message to chat (only you can see it).
 
+#### Parameters
+- `message`: string: The message.
 #### Returns
-- nil: 
-
-## `client.freeMouse`
-```lua
-function client.freeMouse() end
-```
-Frees your mouse.
-
-#### Returns
-- nil: 
-
-## `client.grabMouse`
-```lua
-function client.grabMouse() end
-```
-Grabs your mouse.
-
-#### Returns
-- nil: 
+- nil:
 
 ## `client.getScreenName`
 ```lua
@@ -49,14 +33,104 @@ Returns the current screen name.
 #### Returns
 - string: The screen name.
 
-## `client.displayLocalMessage`
+## `client.freeMouse`
 ```lua
-function client.displayLocalMessage(message) end
+function client.freeMouse() end
 ```
-Prints a message to chat (only you can see it)
+Frees your mouse.
+
+#### Returns
+- nil:
+
+## `client.grabMouse`
+```lua
+function client.grabMouse() end
+```
+Grabs your mouse.
+
+#### Returns
+- nil:
+
+## `client.fps`
+```lua
+function client.fps() end
+```
+Returns the current FPS.
+
+#### Returns
+- number: The current FPS.
+
+## `client.version`
+```lua
+function client.version() end
+```
+Returns the Flarial client version.
+
+#### Returns
+- string: The Flarial version.
+
+## `client.mcVersion`
+```lua
+function client.mcVersion() end
+```
+Returns the current Minecraft client version.
+
+#### Returns
+- string: The Minecraft version.
+
+## `client.isInGame`
+```lua
+function client.isInGame() end
+```
+Returns whether the local player is currently in a world.
+
+#### Returns
+- boolean: True if in-game.
+
+## `client.isSingleplayer`
+```lua
+function client.isSingleplayer() end
+```
+Returns whether the current session is singleplayer.
+
+#### Returns
+- boolean: True if singleplayer.
+
+## `client.isModuleEnabled`
+```lua
+function client.isModuleEnabled(name) end
+```
+Returns whether a module is enabled.
 
 #### Parameters
-- `message`: string: The message.
+- `name`: string: The module name.
+#### Returns
+- boolean: True if the module is enabled.
+
+## `client.getModules`
+```lua
+function client.getModules() end
+```
+Returns all registered modules with name, description, and enabled fields.
+
+#### Returns
+- table[]: The module list.
+
+## `client.exit`
+```lua
+function client.exit() end
+```
+Exits the game/client process.
+
+#### Returns
+- nil:
+
+## `client.crash`
+```lua
+function client.crash() end
+```
+Crashes/exits the game/client process.
+
 #### Returns
 - nil:
 

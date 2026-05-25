@@ -1,4 +1,4 @@
-# Packet recieving
+# Packet receiving
 Gives example of reading packets
 
 ```lua
