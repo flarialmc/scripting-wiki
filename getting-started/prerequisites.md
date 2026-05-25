@@ -15,11 +15,16 @@ To enable autocompletion for Flarial, follow these steps:
 3. Search for **User Third Party** (this setting is located near the bottom).
 4. Add the following directory path:
    ```
-   %localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial\Scripts\AutoComplete
+   %LOCALAPPDATA%\Flarial\Client\Scripts\AutoComplete
    ```
 5. Save your settings.
 
 ### Important Note
-For autocompletion to work correctly, ensure that you open the entire **Scripts** folder in Visual Studio Code rather than just an individual script file.
+For autocompletion to work correctly, open the entire current Scripts folder in Visual Studio Code:
+```
+%LOCALAPPDATA%\Flarial\Client\Scripts
+```
+
+If you are on an old UWP build, the legacy path was `%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial\Scripts`, but current GDK builds use `%LOCALAPPDATA%\Flarial\Client\Scripts`.
 
 With these steps completed, you’ll have full access to all Flarial functions through autocompletion, making scripting way easier!

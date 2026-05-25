@@ -9,7 +9,7 @@ function audio.play(file) end
 Plays a sound.
 
 #### Parameters
-- `file`: string: The file path relative to the Flarial folder.
+- `file`: string: The file path relative to the Flarial client data folder.
 #### Returns
 - nil:
 
