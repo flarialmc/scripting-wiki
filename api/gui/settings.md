@@ -6,6 +6,10 @@
 
 
 
+# `ButtonSetting` class
+
+
+
 # `SliderSetting` class
 
 
@@ -20,12 +24,14 @@
 
 ## `settings.addHeader`
 ```lua
-function settings.addHeader(name) end
+function settings.addHeader(text) end
 ```
-Adds a new Header to the ClickGUI.
+Adds a new header to the ClickGUI.
 
 #### Parameters
 - `text`: string: The header text.
+#### Returns
+- nil:
 
 ## `settings.extraPadding`
 ```lua
@@ -33,6 +39,8 @@ function settings.extraPadding() end
 ```
 Adds extra padding to the ClickGUI.
 
+#### Returns
+- nil:
 
 ## `settings.addToggle`
 ```lua
@@ -45,7 +53,21 @@ Adds a toggle setting to the ClickGUI.
 - `desc`: string: The setting description.
 - `defValue`: boolean: The default value.
 #### Returns
-- BoolSetting: The created setting object with a `value` field.
+- BoolSetting: The created setting object with a value field.
+
+## `settings.addButton`
+```lua
+function settings.addButton(name, desc, buttonText, callback) end
+```
+Adds a button setting to the ClickGUI.
+
+#### Parameters
+- `name`: string: The setting name.
+- `desc`: string: The setting description.
+- `buttonText`: string: The text shown on the button.
+- `callback`: function: The function called when the button is pressed.
+#### Returns
+- ButtonSetting: The created button setting object.
 
 ## `settings.addSlider`
 ```lua
@@ -59,9 +81,9 @@ Adds a slider setting to the ClickGUI.
 - `defValue`: number: The default value.
 - `maxValue`: number: The maximum slider value.
 - `minValue`: number: The minimum slider value.
-- `zerosafe`: boolean|nil: Whether the slider allows zero as a valid value (default is true if omitted).
+- `zerosafe`: boolean: Whether the slider allows zero as a valid value.
 #### Returns
-- SliderSetting: The created setting object with a `value` field.
+- SliderSetting: The created setting object with a value field.
 
 ## `settings.addTextBox`
 ```lua
@@ -75,19 +97,19 @@ Adds a text box setting to the ClickGUI.
 - `defaultValue`: string: The default text inside the textbox.
 - `limit`: number: The maximum number of characters allowed in the textbox.
 #### Returns
-- TextBoxSetting: The created setting object with a `value` field.
+- TextBoxSetting: The created setting object with a value field.
 
 ## `settings.addKeybind`
 ```lua
-function settings.addKeybind(name, desc) end
+function settings.addKeybind(name, desc, defaultKey) end
 ```
-Adds a keybind setting to the ClickGUI.  
-Due to how keybinds are handled in Flarial, default values do not work.
+Adds a keybind setting to the ClickGUI.
 
 #### Parameters
 - `name`: string: The setting name.
 - `desc`: string: The setting description.
+- `defaultKey`: string|nil: The optional default key.
 #### Returns
-- KeybindSetting: The created setting object with a `value` field.
+- KeybindSetting: The created setting object with a value field.
 
 Reference: [settings.lua](https://github.com/flarialmc/scripting-wiki/tree/main/autocomplete/gui/settings.lua)

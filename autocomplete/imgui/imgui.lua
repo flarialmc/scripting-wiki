@@ -1,6 +1,6 @@
 ---@meta
 
----We recommend you refer to ImGuis docs regarding flags.  
+---We recommend you refer to ImGui docs regarding flags.
 ---@class ImGui
 ImGui = {}
 
