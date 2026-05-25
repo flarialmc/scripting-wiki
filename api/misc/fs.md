@@ -9,7 +9,7 @@ function fs.exists(path) end
 Checks if the specified path exists.
 
 #### Parameters
-- `path`: string: The file path relative to the Flarial folder.
+- `path`: string: The file path relative to the Flarial client data folder.
 #### Returns
 - boolean: True if the path exists.
 
@@ -20,7 +20,7 @@ function fs.isDirectory(path) end
 Checks if the specified path is a directory.
 
 #### Parameters
-- `path`: string: The file path relative to the Flarial folder.
+- `path`: string: The file path relative to the Flarial client data folder.
 #### Returns
 - boolean: True if the path is a directory.
 
@@ -31,7 +31,7 @@ function fs.create(path) end
 Creates a directory at the specified path.
 
 #### Parameters
-- `path`: string: The directory path relative to the Flarial folder.
+- `path`: string: The directory path relative to the Flarial client data folder.
 #### Returns
 - boolean: True if the directory was successfully created.
 
@@ -42,7 +42,7 @@ function fs.remove(path) end
 Removes the file or directory at the specified path.
 
 #### Parameters
-- `path`: string: The file or directory path relative to the Flarial folder.
+- `path`: string: The file or directory path relative to the Flarial client data folder.
 #### Returns
 - boolean: True if removal was successful.
 
@@ -53,7 +53,7 @@ function fs.readFile(path) end
 Reads the contents of a file at the specified path.
 
 #### Parameters
-- `path`: string: The file path relative to the Flarial folder.
+- `path`: string: The file path relative to the Flarial client data folder.
 #### Returns
 - string: The file’s content.
 
@@ -64,7 +64,7 @@ function fs.writeFile(path, content) end
 Writes content to the file at the specified path.
 
 #### Parameters
-- `path`: string: The file path relative to the Flarial folder.
+- `path`: string: The file path relative to the Flarial client data folder.
 - `content`: string: The content to write.
 #### Returns
 - boolean: True if writing was successful.
@@ -76,7 +76,7 @@ function fs.listDirectory(path) end
 Lists the contents of the directory at the specified path.
 
 #### Parameters
-- `path`: string: The directory path relative to the Flarial folder.
+- `path`: string: The directory path relative to the Flarial client data folder.
 #### Returns
 - string[]: An array of file and directory names.
 

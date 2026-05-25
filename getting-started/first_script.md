@@ -3,9 +3,11 @@
 To get started, let's create a simple module script.
 
 ### Step 1: Navigate to the Modules Directory
-Create your script inside the following directory:
+Inject Flarial and run `.path scripts` in chat to open the Scripts folder, then open the `Modules` folder.
+
+On current Windows/GDK builds, the modules directory is:
 ```
-%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial\Scripts\Modules
+%LOCALAPPDATA%\Flarial\Client\Scripts\Modules
 ```
 
 ### Step 2: Create a New Lua File

@@ -7,15 +7,24 @@ Flarial Scripting is an API that allows you to create custom modules and command
 ## Script Locations
 To keep everything organized, Flarial stores scripts in designated folders based on their type.
 
-Modules can be found here:
+The easiest way to open the correct folder is to inject Flarial and run `.path scripts` in chat.
+
+Current Windows/GDK builds use this client data folder:
 ```
-%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial\Scripts\Modules
+%LOCALAPPDATA%\Flarial\Client
 ```
 
-Commands can be found here:
+Modules go here:
 ```
-%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial\Scripts\Commands
+%LOCALAPPDATA%\Flarial\Client\Scripts\Modules
 ```
+
+Commands go here:
+```
+%LOCALAPPDATA%\Flarial\Client\Scripts\Commands
+```
+
+Legacy UWP builds used `%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\Flarial`. If you still have that folder, Flarial migrates its data into the current client folder on GDK builds.
 
 ## Where do I find community made scripts?
 You can find and download verified scripts from the [Flarial Marketplace](https://marketplace.flarial.xyz). All scripts in the marketplace have been reviewed and verified by the Flarial team to ensure they are safe and free from malicious code.
