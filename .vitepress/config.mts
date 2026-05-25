@@ -52,7 +52,8 @@ export default defineConfig({
                     { text: "Game", collapsed: false, items: [
                         { text: "events", link: "/api/game/events.md" },
                         { text: "player", link: "/api/game/player.md" },
-                        { text: "server", link: "/api/game/server.md" }
+                        { text: "server", link: "/api/game/server.md" },
+                        { text: "world", link: "/api/game/world.md" }
                     ]},
                     { text: "GUI", collapsed: false, items: [
                         { text: "constraints", link: "/api/gui/constraints.md" },
