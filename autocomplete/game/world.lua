@@ -19,6 +19,21 @@ function world.getBlock(x, y, z) end
 ---@return number The light level.
 function world.getLightLevel(x, y, z) end
 
+---Raycasts from the player's crosshair and returns the hit block if it is within range.
+---Returns nil if there is no local player, no level, the max distance is invalid, or no tile was hit within range.
+---@param maxDistance number|nil Maximum hit distance. Defaults to 6.
+---@return table|nil Hit info with x, y, z, blockX, blockY, blockZ, face, faceId, and distance.
+function world.raycast(maxDistance) end
+
+---Projects a world position to screen coordinates.
+---@param x number The world x coordinate.
+---@param y number The world y coordinate.
+---@param z number The world z coordinate.
+---@return boolean visible True if the world position is visible on screen.
+---@return number screenX The projected screen x coordinate.
+---@return number screenY The projected screen y coordinate.
+function world.worldToScreen(x, y, z) end
+
 ---Returns the current dimension name.
 ---Returns "unknown" if the dimension isn't available.
 ---@return string The dimension name.
