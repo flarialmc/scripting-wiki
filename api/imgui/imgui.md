@@ -12,7 +12,7 @@ Begins a new ImGui window.
 #### Parameters
 - `name`: string: The window name.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.End`
 ```lua
@@ -21,7 +21,7 @@ function ImGui.End() end
 Ends the current ImGui window.
 
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.BeginChild`
 ```lua
@@ -35,7 +35,7 @@ Begins a child window.
 - `child_flags`: boolean|nil: ImGuiChildFlags.
 - `window_flags`: number|nil: ImGuiWindowFlags.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.BeginChildID`
 ```lua
@@ -49,7 +49,7 @@ Begins a child window using an ID.
 - `child_flags`: number|nil: ImGuiChildFlags.
 - `window_flags`: number|nil: ImGuiWindowFlags.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.BeginChildFrame`
 ```lua
@@ -62,7 +62,7 @@ Begins a child frame.
 - `size`: table: The size of the frame, in pixels. Format: {width, height}
 - `flags`: number|nil: ImGuiWindowFlags.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.BeginCombo`
 ```lua
@@ -104,7 +104,7 @@ function ImGui.BeginGroup() end
 Begins an ImGui group.
 
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.BeginMainMenuBar`
 ```lua
@@ -127,11 +127,11 @@ Begins a menu.
 #### Returns
 - boolean: True if the menu is open.
 
-## `ImGui.BeginMainMenuBar`
+## `ImGui.BeginMenuBar`
 ```lua
-function ImGui.BeginMainMenuBar() end
+function ImGui.BeginMenuBar() end
 ```
-Begins a main menu bar.
+Begins a menu bar inside the current window.
 
 #### Returns
 - boolean: True if the menu bar is open.
@@ -205,7 +205,7 @@ function ImGui.BeginTooltip() end
 Begins a tooltip.
 
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.Bullet`
 ```lua
@@ -214,7 +214,7 @@ function ImGui.Bullet() end
 Displays a bullet point.
 
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.BulletText`
 ```lua
@@ -225,7 +225,7 @@ Displays bullet text.
 #### Parameters
 - `text`: string: The text to display.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.Button`
 ```lua
@@ -246,7 +246,7 @@ function ImGui.CloseCurrentPopup() end
 Closes the current popup.
 
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.CollapsingHeader`
 ```lua
@@ -282,7 +282,7 @@ Displays text.
 #### Parameters
 - `text`: string: The text to display.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.InputText`
 ```lua
@@ -333,7 +333,16 @@ Continues drawing on the same line instead of moving to a new line.
 - `offset`: number|nil: X offset from the start of the line in pixels. Use `0` to place immediately after the previous widget.
 - `spacing`: number|nil: Spacing between the previous item and the new item in pixels. Use `-1` for default spacing.
 #### Returns
-- nil: 
+- nil:
+
+## `ImGui.GetIO`
+```lua
+function ImGui.GetIO() end
+```
+Gets ImGui IO state.
+
+#### Returns
+- any: The ImGui IO object.
 
 ## `ImGui.GetDrawData`
 ```lua
@@ -354,7 +363,7 @@ Sets the next window size.
 - `size`: table: The size of the next window, in pixels. Format: {width, height}
 - `flags`: number|nil: ImGuiCond.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.SetNextWindowPos`
 ```lua
@@ -366,7 +375,7 @@ Sets the next window position.
 - `pos`: table: The position of the new window, in pixels. Format: {width, height}
 - `pivot`: table|nil: The pivot of the new window, in pixels. Format: {width, height}
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.SetNextWindowBgAlpha`
 ```lua
@@ -377,7 +386,7 @@ Sets the next window background alpha.
 #### Parameters
 - `alpha`: number: The background alpha value.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.SetNextWindowCollapsed`
 ```lua
@@ -388,7 +397,7 @@ Sets whether the next window is collapsed.
 #### Parameters
 - `collapsed`: boolean: The collapsed state.
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.SetNextWindowFocus`
 ```lua
@@ -397,7 +406,7 @@ function ImGui.SetNextWindowFocus() end
 Sets focus to the next window.
 
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.SetNextWindowContentSize`
 ```lua
@@ -408,7 +417,7 @@ Sets the next window content size.
 #### Parameters
 - `size`: table: The size of the next content, in pixels. Format: {width, height}
 #### Returns
-- nil: 
+- nil:
 
 ## `ImGui.IsKeyDown`
 ```lua
@@ -518,9 +527,9 @@ Returns the size of the Minecraft window.
 #### Returns
 - Vector2: the width and height of the window in pixels.
 
-## `ImGui.GetFrameRate`
+## `ImGui.GetFramerate`
 ```lua
-function ImGui.GetFrameRate() end
+function ImGui.GetFramerate() end
 ```
 Returns Minecraft's framerate in floating point numbers.
 

@@ -30,6 +30,33 @@ Returns 0 if the block source isn't available.
 #### Returns
 - number: The light level.
 
+## `world.raycast`
+```lua
+function world.raycast(maxDistance) end
+```
+Raycasts from the player's crosshair and returns the hit block if it is within range.
+Returns nil if there is no local player, no level, the max distance is invalid, or no tile was hit within range.
+
+#### Parameters
+- `maxDistance`: number|nil: Maximum hit distance. Defaults to 6.
+#### Returns
+- table|nil: Hit info with x, y, z, blockX, blockY, blockZ, face, faceId, and distance.
+
+## `world.worldToScreen`
+```lua
+function world.worldToScreen(x, y, z) end
+```
+Projects a world position to screen coordinates.
+
+#### Parameters
+- `x`: number: The world x coordinate.
+- `y`: number: The world y coordinate.
+- `z`: number: The world z coordinate.
+#### Returns
+- boolean: visible True if the world position is visible on screen.
+- number: screenX The projected screen x coordinate.
+- number: screenY The projected screen y coordinate.
+
 ## `world.getDimension`
 ```lua
 function world.getDimension() end
