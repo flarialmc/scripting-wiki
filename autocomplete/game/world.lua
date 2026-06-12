@@ -43,3 +43,9 @@ function world.getDimension() end
 ---Returns an empty string if the world name isn't available.
 ---@return string The world name.
 function world.getWorldName() end
+
+---Returns nearby loaded entities around the local player.
+---The local player is excluded. Pass 0 to disable the distance filter.
+---@param maxDistance number|nil Maximum distance from the local player. Defaults to 128.
+---@return Entity[] The matching entities.
+function world.getEntities(maxDistance) end

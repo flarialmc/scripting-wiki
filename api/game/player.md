@@ -65,6 +65,18 @@ Returns the player's horizontal movement speed.
 #### Returns
 - number: The player's horizontal speed.
 
+## `player.isTeammate`
+```lua
+function player.isTeammate(playerName) end
+```
+Checks whether another player is on the same team as the local player.
+The lookup matches the player's raw name or formatting-stripped nametag.
+
+#### Parameters
+- `playerName`: string: The player name or visible nametag to check.
+#### Returns
+- boolean: True if the matched player is on your team.
+
 ## `player.health`
 ```lua
 function player.health() end

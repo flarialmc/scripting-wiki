@@ -36,6 +36,12 @@ function player.velocity() end
 ---@return number The player's horizontal speed.
 function player.speed() end
 
+---Checks whether another player is on the same team as the local player.
+---The lookup matches the player's raw name or formatting-stripped nametag.
+---@param playerName string The player name or visible nametag to check.
+---@return boolean True if the matched player is on your team.
+function player.isTeammate(playerName) end
+
 ---Returns the player's health.
 ---Returns -1 if health isn't available.
 ---@return number health The player's health.

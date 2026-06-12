@@ -50,6 +50,7 @@ export default defineConfig({
                         { text: "network", link: "/api/client/network.md" }
                     ]},
                     { text: "Game", collapsed: false, items: [
+                        { text: "entity", link: "/api/game/entity.md" },
                         { text: "events", link: "/api/game/events.md" },
                         { text: "player", link: "/api/game/player.md" },
                         { text: "server", link: "/api/game/server.md" },

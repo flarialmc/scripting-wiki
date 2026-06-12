@@ -77,4 +77,16 @@ Returns an empty string if the world name isn't available.
 #### Returns
 - string: The world name.
 
+## `world.getEntities`
+```lua
+function world.getEntities(maxDistance) end
+```
+Returns nearby loaded entities around the local player.
+The local player is excluded. Pass 0 to disable the distance filter.
+
+#### Parameters
+- `maxDistance`: number|nil: Maximum distance from the local player. Defaults to 128.
+#### Returns
+- Entity[]: The matching entities.
+
 Reference: [world.lua](https://github.com/flarialmc/scripting-wiki/tree/main/autocomplete/game/world.lua)
